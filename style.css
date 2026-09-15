@@ -260,3 +260,22 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 @media(max-width:900px){.visual-experiences .experience-card{display:block}.visual-experiences .tiktok{grid-template-columns:minmax(0,1fr);display:block}.tiktok .work-copy{padding-top:20px}.ad-mockups{max-width:620px;margin:auto}.work-copy{padding-top:20px}}
 @media(max-width:600px){.visual-experiences{grid-template-columns:1fr}.visual-projects .image-project{min-height:340px}.project-overlay{padding:22px}.overlay-heading{margin-bottom:44px}.ad-mockups{padding:16px 12px;gap:9px;grid-template-columns:1.15fr 1fr}.search-preview{padding:10px}.feed-preview{padding:8px}.mock-creative{padding:13px 9px}.mock-creative>span{font-size:20px}.mock-feed-footer{flex-direction:column}.pmax-preview .format-tag{position:static;margin-top:8px}.mock-query{padding:6px}.pmax-preview b{font-size:15px}}
 @media(max-width:360px){.ad-mockups{grid-template-columns:1fr}.search-preview{grid-row:auto}.feed-preview{transform:none}.search-preview{transform:none}}
+
+/* A live campaign sample and a consolidated footer. */
+.visual-experiences .tiktok{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:44px}
+.campaign-visual{background:#f4f4f4;border-radius:14px}
+.campaign-preview{display:flex;flex-direction:column;align-items:center;padding:28px 24px 20px;text-decoration:none;color:#222}
+.campaign-preview>img{display:block;width:auto;max-width:100%;height:430px;object-fit:contain;border:5px solid #181818;border-radius:22px;box-shadow:0 10px 24px #00000014}
+.campaign-watch{font-size:.875rem;margin-top:18px;border-bottom:1px solid #aaa;padding-bottom:2px}
+.campaign-preview:hover .campaign-watch{color:var(--accent);border-color:var(--accent)}
+.site-footer{display:block;max-width:1260px;margin-top:100px;padding-block:38px 28px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-intro .footer-title{font-size:1.8rem;margin-bottom:14px}
+.site-footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;border:0;border-radius:0;background:none;overflow:visible;box-shadow:none}
+.footer-links h2{font-family:var(--mono);font-size:.75rem;color:#777;margin-bottom:7px}
+.site-footer .footer-links a{padding:0;border:0;border-radius:0;font-family:inherit;font-size:.9375rem;line-height:1.5;background:none}
+.site-footer a:hover{color:var(--accent)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;border-top:1px solid #e8e8e8;margin-top:38px;padding-top:20px;color:#777;font-size:.75rem;line-height:1.7}
+.footer-bottom p{max-width:690px}.footer-bottom>span{white-space:nowrap}
+@media(max-width:900px){.visual-experiences .tiktok{display:block}.campaign-preview>img{height:390px}}
+@media(max-width:600px){.campaign-preview{padding:20px 16px 18px}.campaign-preview>img{height:auto;width:min(260px,100%)}.site-footer{margin-top:64px}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.footer-intro{grid-column:1/-1}.footer-bottom{flex-direction:column;align-items:flex-start;gap:14px}.site-footer .footer-links a{font-size:.875rem}}
