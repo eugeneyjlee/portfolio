@@ -1,27 +1,48 @@
+// Fade and settle into the final size, never past it. The typewriter is independent.
 (() => {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (motion.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  if (motion.matches || !Element.prototype.animate) return;
   const animations = new Set();
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      observer.unobserve(entry.target);
-      if (motion.matches || entry.target.contains(document.activeElement)) continue;
-      const animation = entry.target.animate(
-        [{ opacity: 0.35, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }],
-        { duration: 550, easing: 'cubic-bezier(.2,.65,.3,1)' }
-      );
-      animations.add(animation);
-      animation.onfinish = () => animations.delete(animation);
-    }
-  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
-  document.querySelectorAll('.experience-card, .project-row, .about').forEach((item) => observer.observe(item));
+  let observer;
+  const popIn = (element, delay = 0) => {
+    if (motion.matches || element.contains(document.activeElement)) return;
+    const opacity = getComputedStyle(element).opacity;
+    const animation = element.animate(
+      [{ opacity: 0, scale: '0.96' }, { opacity, scale: '1' }],
+      { duration: 520, delay, easing: 'cubic-bezier(.22,.7,.3,1)', fill: 'backwards' }
+    );
+    animations.add(animation);
+    const clean = () => animations.delete(animation);
+    animation.onfinish = clean;
+    animation.oncancel = clean;
+  };
+  const groups = [
+    ['.nav .wordmark, .nav nav a', 0],
+    ['.intro h1', 70],
+    ['.intro-actions a', 110],
+    ['.intro-facts li', 150],
+    ['.landing-photo', 190],
+    ['.intro-side a', 210],
+    ['.intro .doodle', 160]
+  ];
+  groups.forEach(([selector, delay]) => {
+    document.querySelectorAll(selector).forEach((element, index) => popIn(element, delay + index * 35));
+  });
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting);
+      visible.forEach((entry, index) => {
+        observer.unobserve(entry.target);
+        popIn(entry.target, Math.min(index * 45, 180));
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
+    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
+  }
   motion.addEventListener('change', () => {
-    if (motion.matches) {
-      observer.disconnect();
-      animations.forEach((animation) => animation.cancel());
-      animations.clear();
-    }
+    if (!motion.matches) return;
+    observer?.disconnect();
+    animations.forEach((animation) => animation.cancel());
+    animations.clear();
   });
 })();
 

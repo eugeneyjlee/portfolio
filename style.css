@@ -302,3 +302,11 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 @media(max-width:650px){.hero-doodle{top:3px;bottom:auto;left:auto;right:8px;width:60px;height:60px}.work-doodle{width:56px;height:56px;top:-10px}.projects-doodle{width:66px;height:66px;right:15px;top:-50px}.reel-stage{padding:20px 14px;grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr);gap:16px}.campaign-note p{font-size:.75rem}.mini-search{padding:9px}.campaign-kicker{font-size:.625rem}.reel-account strong{font-size:10px}.reel-avatar{width:22px;height:22px}.reel-caption{font-size:10px}.reel-actions{gap:12px;bottom:100px}.reel-actions svg{width:21px;height:21px}.reel-audio{font-size:9px}.campaign-post-link{font-size:.6875rem}.footer-doodle{width:64px;height:64px}}
 @media(max-width:400px){.reel-stage{grid-template-columns:1fr;padding:22px}.instagram-reel{max-width:240px}.campaign-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.campaign-kicker,.mini-search,.campaign-post-link{grid-column:1/-1}.campaign-note{margin:0}.mini-search{margin:0}.campaign-post-link{margin-top:0;justify-self:start}.reel-account strong{font-size:12px}.reel-caption{font-size:11px}.reel-audio{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.doodle{animation:none}}
+
+/* Idea and camera sketches frame the typing line without moving its text. */
+.typewriter-wrap{position:relative;padding-bottom:19px}
+.typewriter-wrap>.doodle{background-image:url('./idea-camera-doodles.png');background-size:200% 100%;width:64px;height:64px;opacity:.78}
+.idea-doodle{background-position:0 0;top:-55px;left:26%;--tilt:-9deg;animation-delay:-2s}
+.camera-doodle{background-position:100% 0;right:2%;bottom:-18px;--tilt:8deg;animation-delay:-4s}
+.intro-facts li,.intro-actions a,.landing-photo,.experience-card,.project-row{transform-origin:center}
+@media(max-width:650px){.intro-center{padding-top:55px}.typewriter-wrap>.doodle{width:54px;height:54px}.idea-doodle{top:-47px;left:auto;right:20%}.camera-doodle{bottom:-14px;right:0}.typewriter-wrap{padding-bottom:17px}}
