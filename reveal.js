@@ -75,3 +75,44 @@
   timer = setTimeout(type, 350);
   motion.addEventListener('change', () => { if (motion.matches) complete(); });
 })();
+
+// Native swipe/scroll plus buttons and keyboard navigation; no autoplay.
+(() => {
+  const root = document.querySelector('.video-carousel');
+  if (!root) return;
+  const track = root.querySelector('.carousel-track');
+  const slides = [...track.querySelectorAll('.video-slide')];
+  const previous = root.querySelector('.carousel-prev');
+  const next = root.querySelector('.carousel-next');
+  const dots = [...root.querySelectorAll('[data-slide]')];
+  const status = root.querySelector('.carousel-status');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let current = 0;
+  const positions = () => slides.map(slide => Math.min(slide.offsetLeft, track.scrollWidth - track.clientWidth));
+  const update = () => {
+    const points = positions();
+    current = points.reduce((best, point, i) => Math.abs(point - track.scrollLeft) < Math.abs(points[best] - track.scrollLeft) ? i : best, 0);
+    previous.disabled = track.scrollLeft < 2;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
+    status.textContent = `${current + 1} / ${slides.length}`;
+  };
+  const go = (index) => {
+    const bounded = Math.max(0, Math.min(slides.length - 1, index));
+    track.scrollTo({ left: positions()[bounded], behavior: motion.matches ? 'instant' : 'smooth' });
+  };
+  previous.addEventListener('click', () => go(current - 1));
+  next.addEventListener('click', () => go(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+  track.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault();
+      go(current + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  root.querySelector('.carousel-controls').hidden = false;
+  root.querySelector('.carousel-dots').hidden = false;
+  update();
+})();

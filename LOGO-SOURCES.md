@@ -57,3 +57,5 @@ THE SOFTWARE.
 ## Live campaign sample
 - tiktok-ello-ad.png: user-supplied still from https://www.instagram.com/p/DcLKmADsVRe/ . Eugene confirmed working on this ad. Replaces illustrative paid-media layouts.
 - All currently displayed reference images come from company websites, official regional brand sites, or company campaigns. The former third-party Gemini photo is no longer displayed.
+
+- Berkeley wordmark: https://life.berkeley.edu/wp-content/themes/berkeley_brand/img/Berkeley_SecondaryBrand_Logo_CaliforniaGold_RGB_footer.svg (official Berkeley Life website). Carousel covers are explicitly labeled layout placeholders, not published work.
