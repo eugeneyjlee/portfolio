@@ -234,3 +234,29 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 .project-copy{padding-top:18px}.project-copy h3{font-size:1.125rem}.project-copy .project-role{font-family:inherit;font-size:.8125rem;color:#777;line-height:1.6;margin:6px 0 12px}.project-copy .project-outcome{font-size:.9375rem;line-height:1.65;color:#606060}
 @media(max-width:900px){.visual-experiences{grid-template-columns:1fr;gap:36px}.visual-experiences .experience-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}.work-copy{padding-top:0}.work-visual>img{height:250px}.work-visual{align-self:start}}
 @media(max-width:600px){.visual-experiences .experience-card{display:block}.work-copy{padding-top:18px}.work-visual>img{height:240px}.visual-projects{grid-template-columns:1fr;gap:32px}.project-cover{height:180px}.work-copy h4{margin-top:14px}}
+
+/* Paid-media format previews; project copy sits over softly screened brand imagery. */
+.visual-experiences{grid-template-columns:repeat(2,minmax(0,1fr))}
+.visual-experiences .tiktok{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:32px;align-items:center}
+.tiktok .work-copy{padding:0}.ads-visual{width:100%;background:#f0f1f4}
+.ad-mockups{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto;gap:12px;padding:24px;color:#333;font-family:Arial,sans-serif;pointer-events:none}
+.search-preview,.feed-preview,.pmax-preview{background:white;border:1px solid #e4e5e9;border-radius:9px;overflow:hidden;box-shadow:0 7px 16px #1018280b;position:relative}
+.search-preview{grid-row:1/3;padding:14px;transform:rotate(-2deg)}
+.mock-browser{font-size:12px;display:flex;align-items:center;gap:6px;color:#555;margin-bottom:12px}.mock-browser>span:last-child{margin-left:auto}
+.mock-query{border:1px solid #eee;border-radius:24px;padding:8px 10px;font-size:12px;display:flex;justify-content:space-between;gap:8px;margin-bottom:16px}
+.mock-search-result small,.feed-preview>small,.pmax-preview>small{font-size:12px;color:#666;display:block}
+.mock-search-result b{display:block;color:#2853af;font-size:14px;line-height:1.35;margin:6px 0}.mock-search-result p{font-size:12px;line-height:1.5;color:#666}.mock-sitelinks{color:#2853af;font-size:12px;margin:10px 0 16px}.organic{border-top:1px solid #eee;padding-top:12px}
+.format-tag{display:block;width:fit-content;font-size:12px;color:#626775;padding:5px 8px;background:#f1f3f7;border-radius:4px;margin-top:14px}
+.feed-preview{padding:12px;transform:rotate(2deg)}.feed-preview .mock-browser{margin-bottom:1px}.mock-avatar{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#1e293b;color:#fff;font-size:12px}.feed-preview>small{margin-bottom:8px}
+.mock-creative{padding:16px 12px;background:#1e293b;color:white;border-radius:3px}.mock-creative>span{display:block;font-size:22px;line-height:1.1;letter-spacing:-.04em}.mock-creative p{font-size:12px;margin-top:10px;color:#dce4f0}.mock-feed-footer{font-size:12px;display:flex;gap:6px;justify-content:space-between;margin-top:10px}.mock-feed-footer>span{color:#2853af}.feed-preview .format-tag{margin-top:10px}
+.pmax-preview{padding:12px;background:#faf9f6}.pmax-preview b{display:block;font-size:17px;line-height:1.2;margin:6px 0}.mock-cta{display:inline-block;font-size:12px;background:#222;color:white;padding:5px 8px;border-radius:4px}.pmax-preview .format-tag{position:absolute;right:8px;bottom:10px;font-size:11px;background:transparent;padding:0}
+.visual-projects .image-project{position:relative;isolation:isolate;overflow:hidden;min-height:350px;border:1px solid #e4e4e4;border-radius:14px;background:#fff;display:flex}
+.project-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;z-index:-2}
+.image-project::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#ffffff35 0%,#ffffff96 42%,#fffffff0 100%);z-index:-1}
+.project-overlay{display:flex;flex-direction:column;width:100%;padding:25px 28px 20px}
+.overlay-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:50px}.overlay-heading .cover-logos{height:36px;justify-content:flex-start;gap:12px}.overlay-heading .cover-logos img{max-height:28px;max-width:92px}.overlay-topic{font-family:var(--mono);font-size:.75rem;color:#444;text-align:right}
+.project-overlay .project-copy{padding:0;margin-top:auto}.project-overlay h3{font-size:1.45rem;letter-spacing:-.04em}.project-overlay .project-role{color:#4f4f4f;margin:7px 0 12px}.project-overlay .project-outcome{color:#292929;font-size:.9375rem;max-width:440px;line-height:1.65}.image-credit{font-size:.6875rem;color:#686868;text-decoration:none;align-self:flex-end;margin-top:16px}.image-credit:hover{text-decoration:underline}
+.image-project-1 .project-backdrop{object-position:center 60%}.image-project-5 .project-backdrop{object-position:60% 40%}
+@media(max-width:900px){.visual-experiences .experience-card{display:block}.visual-experiences .tiktok{grid-template-columns:minmax(0,1fr);display:block}.tiktok .work-copy{padding-top:20px}.ad-mockups{max-width:620px;margin:auto}.work-copy{padding-top:20px}}
+@media(max-width:600px){.visual-experiences{grid-template-columns:1fr}.visual-projects .image-project{min-height:340px}.project-overlay{padding:22px}.overlay-heading{margin-bottom:44px}.ad-mockups{padding:16px 12px;gap:9px;grid-template-columns:1.15fr 1fr}.search-preview{padding:10px}.feed-preview{padding:8px}.mock-creative{padding:13px 9px}.mock-creative>span{font-size:20px}.mock-feed-footer{flex-direction:column}.pmax-preview .format-tag{position:static;margin-top:8px}.mock-query{padding:6px}.pmax-preview b{font-size:15px}}
+@media(max-width:360px){.ad-mockups{grid-template-columns:1fr}.search-preview{grid-row:auto}.feed-preview{transform:none}.search-preview{transform:none}}

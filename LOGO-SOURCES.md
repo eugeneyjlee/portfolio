@@ -16,3 +16,40 @@ These are public brand/product reference images, not Eugene-authored deliverable
 - TikTok Ads Manager example: https://lf16-adcdn-va.ibytedtos.com/obj/i18nblog/tt4b_cms/en-US/5jqet0ab9qci-3ZXdBz7XuL2I9gbWaT9LdO.jpg
 - MangoBoost Alphonso product image: https://www.mangoboost.io/products/alphonso (Sanity asset ef088878f9dd7aa34fb80ee68f20a37d58a4ef96-4000x1251.jpg).
 - Chime debit card product image: https://www.chime.com/online-banking/spotme/ (Contentful asset 2WpufplDskOCZS2n5F6nea, hero-spotme__1_.webp).
+
+
+## Photo-overlay project cards
+Reference imagery, not authored project deliverables:
+- project-cider.jpg: https://blog.shopcider.com/many-yous-many-moods/
+- project-paypal.png: https://www.paypal.com/us/business/accept-payments/checkout
+- project-venmo.jpg: https://venmo.com/
+- project-equinox.png: https://www.equinox.com/clubs/northern-california/sanramon
+- project-gemini.jpg: https://www.androidcentral.com/apps-software/geminis-built-in-ai-image-editor-is-here-to-mess-with-your-photos-directly
+- project-skullcandy.jpg: https://www.skullcandy.jp/crusheranc2_bonewhite
+- project-liner.webp: https://liner.com/
+- LinkedIn icon: Bootstrap Icons, MIT license, https://github.com/twbs/icons/blob/main/icons/linkedin.svg
+- Paid-media preview: illustrative HTML/CSS layout. Sample copy, not live ads or performance evidence.
+
+### Bootstrap Icons license
+
+The MIT License (MIT)
+
+Copyright (c) 2019-2024 The Bootstrap Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
