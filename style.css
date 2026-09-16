@@ -366,3 +366,14 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 /* Small drifting accents stay in the section margins, away from content. */
 .extra-hero{right:2%;top:155px;width:42px;height:42px;--tilt:8deg;animation-delay:-3s}.extra-work{left:-27px;top:50%;width:42px;height:42px;--tilt:-12deg;animation-delay:-1s}.extra-projects-left{left:-30px;top:38%;width:42px;height:42px;--tilt:10deg;animation-delay:-5s}.extra-projects-right{right:-26px;top:74%;width:40px;height:40px;--tilt:-8deg;animation-delay:-2s}.extra-footer{left:40%;top:-35px;width:44px;height:44px;--tilt:10deg;animation-delay:-4s}.overlay-heading .cover-logos img{width:96px;height:32px;object-fit:contain;object-position:left center}
 @media(max-width:650px){.extra-hero{right:14%;top:0;width:30px;height:30px}.extra-work,.extra-projects-left{left:-12px;width:28px;height:28px}.extra-projects-right{right:-12px;width:28px;height:28px}.extra-footer{width:34px;height:34px}}
+
+/* Pink landing palette. */
+.nav,.intro{--ink:#b83273;--accent:#b83273;color:#b83273}
+.nav a,.intro h1,.intro h1 em,.intro .intro-text,.intro .fact-label,.intro .intro-facts li>span+span,.intro .side-email,.intro .social-icons a{color:#b83273}
+.nav a:hover,.intro a:hover{color:#94265c}
+.intro-identity,.intro-center{border-color:#efc5d8}
+.intro .social-icons a:hover{background:#fceaf2;color:#94265c}
+.intro .social-icons img,.intro .doodle{filter:brightness(0) saturate(100%) invert(33%) sepia(51%) saturate(1559%) hue-rotate(293deg) brightness(85%) contrast(95%)}
+.intro .idea-doodle{top:-57px}
+.intro .landing-photo{background:#fceaf2}
+@media(max-width:650px){.intro .idea-doodle{top:-51px}.intro-identity{border-color:#efc5d8}}
