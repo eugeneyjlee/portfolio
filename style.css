@@ -333,3 +333,13 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 .berkeley-reel-link:hover .reel-watch-label{background:#111}.berkeley-reel-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
 .carousel-dots{flex-wrap:wrap;gap:16px;max-width:500px;margin:14px auto 0;padding:8px}
+
+/* Compact video strip: half-width covers, full-size readable labels. */
+.carousel-track{--cover-width:max(105px,14.5%);gap:16px}.video-slide{flex:0 0 var(--cover-width);min-width:0}.carousel-track::after{flex-basis:calc(100% - var(--cover-width) - 16px)}
+.video-slide h4{font-size:.875rem;line-height:1.4}.video-slide .video-date{font-size:.75rem;margin-top:5px}.reel-watch-label{font-size:.75rem;left:5px;right:5px;bottom:5px;padding:6px 3px;gap:3px}
+@media(max-width:650px){.carousel-track{--cover-width:37.5%}.carousel-track::after{flex-basis:calc(100% - var(--cover-width) - 16px)}}
+/* The actual ad is the centerpiece, with a soft campaign-image backdrop. */
+.reel-stage{position:relative;isolation:isolate;display:flex;justify-content:center;padding:48px 24px 28px;overflow:hidden;min-height:440px;background:#eee}
+.reel-stage::before{content:"";position:absolute;inset:-18px;z-index:-1;background:linear-gradient(#ffffffb8,#ffffffd6),url('./tiktok-ello-ad.png') center 45%/cover;filter:blur(4px)}
+.reel-stage .instagram-reel{width:220px;flex:none;transform:rotate(-3deg);margin-top:18px}.campaign-brand{position:absolute;top:18px;left:20px;display:flex;align-items:center;gap:8px;font-size:.8125rem;line-height:1.35}.campaign-brand small{font-size:.75rem;color:#666}
+@media(max-width:650px){.reel-stage{min-height:400px}.reel-stage .instagram-reel{width:195px}}
