@@ -36,7 +36,7 @@
         popIn(entry.target, Math.min(index * 45, 180));
       });
     }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
+    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
   }
   motion.addEventListener('change', () => {
     if (!motion.matches) return;
@@ -46,35 +46,8 @@
   });
 })();
 
-// Type once; keep a complete, stable sentence available to screen readers.
-(() => {
-  const line = document.querySelector('[data-typewriter]');
-  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (!line || motion.matches) return;
-  const sentence = line.textContent;
-  const accessible = document.createElement('span');
-  accessible.className = 'sr-only';
-  accessible.textContent = sentence;
-  const visual = document.createElement('span');
-  visual.className = 'typewriter-visual';
-  visual.setAttribute('aria-hidden', 'true');
-  line.replaceChildren(accessible, visual);
-  let index = 0;
-  let timer;
-  const complete = () => {
-    clearTimeout(timer);
-    visual.textContent = sentence;
-    line.classList.add('is-complete');
-  };
-  const type = () => {
-    if (motion.matches) return complete();
-    visual.textContent = sentence.slice(0, ++index);
-    if (index < sentence.length) timer = setTimeout(type, 32);
-    else complete();
-  };
-  timer = setTimeout(type, 350);
-  motion.addEventListener('change', () => { if (motion.matches) complete(); });
-})();
+// The hero sentence now animates in CSS by clipping its own single node;
+// see .intro-text.typewriter in style.css.
 
 // Native swipe/scroll with bounded navigation and a single moving indicator.
 (() => {

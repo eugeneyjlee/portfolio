@@ -410,10 +410,10 @@ body{position:relative;isolation:isolate}
 
 /* Size the shared column to the complete sentence, including while it types. */
 .intro-content{width:fit-content;max-width:100%;min-width:0}
-.intro-width-guide{display:block;height:0;overflow:hidden;visibility:hidden;white-space:nowrap;font-size:calc(clamp(.875rem,1.25vw,1.25rem) + var(--text-size-step, 0pt));line-height:1.55;letter-spacing:normal}
-.intro-content>.typewriter-wrap,.intro-content>.intro-facts,.intro-content>.landing-photo{contain:inline-size;width:100%;max-width:100%}
+.intro-content>.intro-facts,.intro-content>.landing-photo{contain:inline-size;width:100%;max-width:100%}
+.intro-content>.typewriter-wrap{width:max-content;max-width:100%}
 .intro-content .intro-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 56px;margin:34px 0 36px}
-@media(max-width:650px){.intro-content{width:100%}.intro-width-guide{font-size:calc(1.125rem + var(--text-size-step, 0pt))}.intro-content .intro-facts{gap:30px 24px;margin:28px 0 30px}}
+@media(max-width:650px){.intro-content{width:100%}.intro-content .intro-facts{gap:30px 24px;margin:28px 0 30px}}
 
 /* One-point increase in page content; preserve the greeting, header and footer. */
 main{--text-size-step:1pt;font-size:calc(1rem + 1pt)}
@@ -492,3 +492,45 @@ main h1{--text-size-step:0pt}
 
 /* Chime's knowledge base as its visual, framed like the MangoBoost site. */
 .chime-website{height:280px;background:#fff;border:1px solid #e5e5e5}
+
+/* One scannable result per role, pulled out of the summary paragraph. */
+.outcome-stat{display:inline-block;margin:14px 0 0;padding:6px 12px;border-radius:100px;background:#f1f1f1;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.45;color:#3d3d3d}
+.outcome-stat+.summary{margin-top:12px}
+
+/* Selected Social Content: its own section, below the project files. */
+.social{max-width:1100px;margin-inline:auto;margin-top:100px;min-width:0}
+.social .carousel-topline>.views-updated{margin-top:0;font-family:var(--mono);color:#777}
+.video-tag{display:inline-block;margin:12px 0 0;padding:4px 10px;border-radius:100px;background:#f1f1f1;font-family:var(--mono);font-size:calc(.6875rem + var(--text-size-step, 0pt));line-height:1.5;color:#4a4a4a}
+.video-title{margin:9px 0 0;font-size:calc(1rem + var(--text-size-step, 0pt));font-weight:500;line-height:1.4;letter-spacing:-.01em}
+.social .video-slide .video-date{margin-top:5px}
+.social-more{margin-top:22px}
+.social-more a{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step, 0pt));color:var(--ink);text-decoration:none;border-bottom:1px solid #c9c9c9;padding-bottom:2px}
+.social-more a:hover{color:var(--accent);border-bottom-color:currentColor}
+@media(max-width:780px){.social{margin-top:72px}}
+@media(max-width:520px){.social{margin-top:56px}}
+@media print{.social{margin-top:30px}}
+
+/* One semantic copy of the hero sentence, revealed by clipping the same node.
+   The text is always present and always full width, so nothing shifts and the
+   accessible name is never rewritten character by character. */
+@keyframes hero-type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.intro-text.typewriter{animation:hero-type 2.4s steps(82,end) .35s both}
+@media(max-width:1100px){.intro-content>.typewriter-wrap{width:100%}}
+@media(prefers-reduced-motion:reduce){.intro-text.typewriter{animation:none;clip-path:none}}
+
+/* Below ~1180px the page gutter is narrower than this doodle's overhang, so
+   its -30px offset pushed the document 4px wider than the viewport. Tuck it
+   inside the edge over that range; it is hidden entirely under 650px. */
+@media(max-width:1180px){.extra-projects-right{right:6px}}
+
+/* 6.4 — an editorial split: three featured projects, then the rest denser. */
+.featured-projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.project-group-label{margin:44px 0 18px;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));color:#777}
+.additional-projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.additional-projects .image-project{min-height:210px}
+.additional-projects .project-overlay{padding:20px}
+.additional-projects .overlay-heading{margin-bottom:18px}
+.additional-projects .project-overlay h3{font-size:calc(1.125rem + var(--text-size-step, 0pt));letter-spacing:-.02em}
+.additional-projects .project-overlay .project-outcome{font-size:calc(.875rem + var(--text-size-step, 0pt))}
+@media(max-width:1000px){.featured-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.featured-projects,.additional-projects{grid-template-columns:1fr}.project-group-label{margin-top:32px}}
