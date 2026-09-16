@@ -485,7 +485,7 @@ main h1{--text-size-step:0pt}
 .reel-embed-fallback{position:absolute;inset:0;z-index:2;display:block;overflow:hidden;color:#fff;text-decoration:none;background:#f3f3f3;transition:opacity .3s ease}
 .reel-embed-fallback>img{display:block;width:100%;height:100%;object-fit:cover}
 .reel-embed-fallback:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
-.reel-embed.is-loaded .reel-embed-fallback{opacity:0;pointer-events:none;z-index:0}
+/* covers live in <noscript>; a stalled embed re-adds its own */
 .video-slide .video-date{margin-top:9px}
 @media(prefers-reduced-motion:reduce){.reel-embed>iframe,.reel-embed-fallback{transition:none}}
 @media(max-width:650px){.carousel-track{--cover-width:min(326px,84vw)}}
