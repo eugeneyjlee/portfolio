@@ -450,10 +450,10 @@ main h1{--text-size-step:0pt}
 @media(max-width:650px){.visual-experiences{grid-template-columns:1fr}.visual-experiences .tiktok{display:block}.tiktok .work-copy{padding-top:20px}}
 
 
-/* Three standalone campaign creatives across the full width, no scroll box. */
-.visual-experiences .tiktok{display:block}
+/* Three standalone creatives beside the TikTok copy, filling the row together. */
+.visual-experiences .tiktok{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.75fr) minmax(300px,1fr);gap:36px;align-items:start}
 .tiktok .campaign-visual{background:transparent;border-radius:0;overflow:visible}
-.paid-assets{height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.41fr);align-items:start;gap:24px;padding:0;background:transparent;overflow:visible;scroll-snap-type:none}
+.paid-assets{height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.41fr);align-items:start;gap:20px;padding:0;background:transparent;overflow:visible;scroll-snap-type:none}
 .paid-assets>a{width:auto;min-width:0;gap:10px}
 .tiktok-phone{container-type:inline-size;width:100%;height:auto;aspect-ratio:122/217;border-width:clamp(3px,1.4cqw,5px);border-radius:clamp(15px,6cqw,26px)}
 .tiktok-phone>img{position:absolute;inset:0;width:100%;height:100%}
@@ -464,9 +464,11 @@ main h1{--text-size-step:0pt}
 .browser-ad{container-type:inline-size;display:flex;flex-direction:column;aspect-ratio:172/217;border-radius:clamp(7px,2.5cqw,12px)}
 .browser-ad-bar{height:clamp(19px,7cqw,30px);flex:none;font-size:clamp(8px,3.6cqw,13px);gap:clamp(17px,7cqw,26px);padding-inline:clamp(7px,3cqw,12px)}
 .browser-ad>img{flex:1;min-height:0;width:100%;height:auto}
-.ad-label{font-size:calc(.8125rem + var(--text-size-step, 0pt));line-height:1.45}
-.tiktok .work-copy{max-width:760px;padding-top:26px}
-@media(max-width:900px){.paid-assets{gap:18px}}
+.ad-label{font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.45}
+.tiktok .work-copy{max-width:none;padding-top:0}
+@media(max-width:1000px){.visual-experiences .tiktok{grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:28px}}
+@media(max-width:900px){.visual-experiences .experience-card:not(.berkeley-life).tiktok{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);gap:22px}.tiktok .work-copy{padding-top:0}.paid-assets{gap:14px}}
+@media(max-width:800px){.visual-experiences .experience-card:not(.berkeley-life).tiktok{display:block}.tiktok .work-copy{padding-top:24px}.paid-assets{gap:18px}}
 @media(max-width:600px){.paid-assets{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}.paid-assets>.paid-static{grid-column:1/-1}.ad-label{font-size:calc(.75rem + var(--text-size-step, 0pt))}}
 
 /* Landing icons read as one horizontal row under the greeting. */
