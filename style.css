@@ -376,3 +376,11 @@ nav{border:0;background:none;border-radius:0}nav a+a{border:0}nav a{font-family:
 .spark-1{left:18%;top:25px}.spark-2{left:16%;top:230px;--tilt:12deg}.spark-3{left:8%;top:440px;width:35px;height:35px}.spark-4{right:15%;top:60px;animation-delay:-1s}.spark-5{right:9%;top:310px;width:54px;height:54px}.spark-6{right:18%;top:440px;animation-delay:-5s}.spark-7{right:5%;bottom:65px}.spark-8{left:21%;bottom:130px;width:34px;height:34px}.spark-9{right:16%;bottom:170px;--tilt:14deg}
 @media(max-width:1000px){.spark-4{right:3%;top:12px}.spark-5{right:2%;top:auto;bottom:9px}.spark-6{left:16%;right:auto;top:340px}.spark-7{left:5%;right:auto;bottom:155px}.spark-9{left:19%;right:auto;bottom:240px}}
 @media(max-width:650px){.intro .idea-doodle{top:-51px}.landing-spark{width:26px;height:26px}.spark-1{left:42%;top:0}.spark-2{left:auto;right:2%;top:145px}.spark-3{left:auto;right:23%;top:155px;width:24px;height:24px}.spark-4{right:38%;top:178px}.spark-5{width:30px;height:30px;bottom:0;right:4%}.spark-6{left:3%;top:auto;bottom:0}.spark-7{left:27%;bottom:4px}.spark-8{left:51%;bottom:0;width:25px;height:25px}.spark-9{left:74%;bottom:2px}.intro-side{min-height:38px}}
+
+/* A hand-drawn greeting and scattered background color. */
+body{position:relative;isolation:isolate}
+.background-doodles{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.background-doodles .doodle{left:var(--x);top:var(--y);width:46px;height:46px;opacity:.24}
+.intro .hand-doodle{display:inline-block;width:.9em;height:1em;margin-left:.12em;vertical-align:-.12em;color:#171717;line-height:1}
+.hand-doodle svg{display:block;width:100%;height:100%;transform:rotate(-9deg)}
+@media(max-width:650px){.background-doodles .doodle{width:28px;height:28px;opacity:.16}.intro .hand-doodle{width:.8em}}
