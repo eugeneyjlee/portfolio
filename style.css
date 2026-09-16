@@ -418,3 +418,21 @@ body{position:relative;isolation:isolate}
 /* One-point increase in page content; preserve the greeting, header and footer. */
 main{--text-size-step:1pt;font-size:calc(1rem + 1pt)}
 main h1{--text-size-step:0pt}
+
+/* Mobile decorations occupy separate gaps instead of sharing desktop anchors. */
+@media(max-width:650px){
+ .intro .extra-hero,.intro .spark-3,.intro .spark-4,.intro .spark-5,.intro .spark-6,.intro .spark-8,.intro .spark-9{display:none}
+ .intro .hero-doodle{width:29px;height:29px;top:3px;right:5%;left:auto;bottom:auto}
+ .intro .spark-1{width:23px;height:23px;left:43%;top:0;right:auto;bottom:auto}
+ .intro .spark-2{width:25px;height:25px;top:145px;right:4%;left:auto;bottom:auto}
+ .intro .spark-7{width:26px;height:26px;left:18%;right:auto;bottom:7px;top:auto}
+ .intro .idea-doodle{width:32px;height:32px;left:8%;right:auto;top:-42px}
+ .intro .camera-doodle{width:32px;height:32px;right:5%;bottom:-15px}
+ .work-doodle{width:29px;height:29px;right:6%;top:12px}
+ .projects-doodle{width:30px;height:30px;right:9%;top:-43px}
+ .extra-work,.extra-projects-left,.extra-projects-right{display:none}
+ .footer-doodle{width:30px;height:30px;right:5%;top:-46px}
+ .extra-footer{width:24px;height:24px;left:17%;top:-36px}
+ .background-doodles .varied-doodle{width:16px;height:16px;opacity:.24;left:0}
+ .background-doodles .varied-doodle:nth-child(even){left:auto;right:0}
+}
