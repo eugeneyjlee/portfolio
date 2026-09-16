@@ -449,3 +449,26 @@ main h1{--text-size-step:0pt}
 @media(max-width:800px){.visual-experiences .tiktok{grid-template-columns:minmax(0,1.2fr) minmax(240px,1fr);gap:24px}}
 @media(max-width:650px){.visual-experiences{grid-template-columns:1fr}.visual-experiences .tiktok{display:block}.tiktok .work-copy{padding-top:20px}}
 
+
+/* Three standalone campaign creatives across the full width, no scroll box. */
+.visual-experiences .tiktok{display:block}
+.tiktok .campaign-visual{background:transparent;border-radius:0;overflow:visible}
+.paid-assets{height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.41fr);align-items:start;gap:24px;padding:0;background:transparent;overflow:visible;scroll-snap-type:none}
+.paid-assets>a{width:auto;min-width:0;gap:10px}
+.tiktok-phone{container-type:inline-size;width:100%;height:auto;aspect-ratio:122/217;border-width:clamp(3px,1.4cqw,5px);border-radius:clamp(15px,6cqw,26px)}
+.tiktok-phone>img{position:absolute;inset:0;width:100%;height:100%}
+.phone-feed{top:3.2cqw;font-size:clamp(8px,4.6cqw,15px)}
+.phone-caption{left:4cqw;right:4cqw;bottom:5cqw;font-size:clamp(8px,4.4cqw,14px)}
+.phone-actions{right:4cqw;bottom:17cqw;gap:clamp(10px,5cqw,16px)}
+.phone-actions svg{width:clamp(15px,8.5cqw,26px);height:clamp(15px,8.5cqw,26px)}
+.browser-ad{container-type:inline-size;display:flex;flex-direction:column;aspect-ratio:172/217;border-radius:clamp(7px,2.5cqw,12px)}
+.browser-ad-bar{height:clamp(19px,7cqw,30px);flex:none;font-size:clamp(8px,3.6cqw,13px);gap:clamp(17px,7cqw,26px);padding-inline:clamp(7px,3cqw,12px)}
+.browser-ad>img{flex:1;min-height:0;width:100%;height:auto}
+.ad-label{font-size:calc(.8125rem + var(--text-size-step, 0pt));line-height:1.45}
+.tiktok .work-copy{max-width:760px;padding-top:26px}
+@media(max-width:900px){.paid-assets{gap:18px}}
+@media(max-width:600px){.paid-assets{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}.paid-assets>.paid-static{grid-column:1/-1}.ad-label{font-size:calc(.75rem + var(--text-size-step, 0pt))}}
+
+/* Landing icons read as one horizontal row under the greeting. */
+.intro-actions.social-icons{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:6px;margin:52px 0 0}
+@media(max-width:650px){.intro-actions.social-icons{margin-top:20px;gap:9px}}
