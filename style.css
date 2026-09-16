@@ -489,3 +489,6 @@ main h1{--text-size-step:0pt}
 .video-slide .video-date{margin-top:9px}
 @media(prefers-reduced-motion:reduce){.reel-embed>iframe,.reel-embed-fallback{transition:none}}
 @media(max-width:650px){.carousel-track{--cover-width:min(326px,84vw)}}
+
+/* Chime's knowledge base as its visual, framed like the MangoBoost site. */
+.chime-website{height:280px;background:#fff;border:1px solid #e5e5e5}
