@@ -70,3 +70,8 @@ Sandbox VR video thumbnail and static paid-channel ad supplied by Eugene Lee (IM
 MangoBoost: live embedded official website https://www.mangoboost.io/ (headers checked September 15, 2026).
 Chime app image: https://www.chime.com/online-banking/mobile-banking/ ; official Contentful asset https://images.ctfassets.net/ao7gxs2zk32d/2Mv5UqZ1Dh0Nwv2y7GY8cm/3571b231bdbd8afaf8a97938670df9b4/content_right.png .
 Sandbox VR static-ad post supplied by Eugene: https://www.instagram.com/p/DcKizcoMnkU/ .
+
+## Transparent project wordmarks
+Cider: official inline icon-logo-header SVG from https://www.shopcider.com/ .
+Skullcandy: official transparent wordmark https://www.skullcandy.com/cdn/shop/files/skdylogosvg.svg?v=1710432982 .
+Tab icon reuses the original generated sun doodle in doodles.png.
