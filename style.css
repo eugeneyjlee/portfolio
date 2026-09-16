@@ -407,3 +407,10 @@ body{position:relative;isolation:isolate}
 @media(max-width:1100px){.intro{grid-template-columns:minmax(220px,28fr) minmax(0,72fr)}.intro-center{padding-left:26px}.intro-facts{gap:26px 22px;font-size:.875rem}.intro .intro-text{white-space:normal;min-height:0}.spark-6{left:auto;right:8%;top:auto}.spark-7{left:auto;right:27%;bottom:8px}.spark-9{left:auto;right:47%;bottom:8px}}
 @media(max-width:800px){.intro-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}}
 @media(max-width:650px){.intro{display:block}.intro-identity{grid-row:auto}.intro-center{padding:55px 0 50px}.intro .intro-text{font-size:1.125rem;white-space:normal}.intro-facts{margin:28px 0;gap:28px 24px}.spark-4{top:178px;right:38%}.spark-5{top:auto;bottom:0;right:4%;width:30px;height:30px}.spark-6{left:3%;right:auto;bottom:0}.spark-7{left:27%;right:auto;bottom:4px}.spark-9{left:74%;right:auto;bottom:2px}}
+
+/* Size the shared column to the complete sentence, including while it types. */
+.intro-content{width:fit-content;max-width:100%;min-width:0}
+.intro-width-guide{display:block;height:0;overflow:hidden;visibility:hidden;white-space:nowrap;font-size:clamp(.875rem,1.25vw,1.25rem);line-height:1.55;letter-spacing:normal}
+.intro-content>.typewriter-wrap,.intro-content>.intro-facts,.intro-content>.landing-photo{contain:inline-size;width:100%;max-width:100%}
+.intro-content .intro-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 56px;margin:34px 0 36px}
+@media(max-width:650px){.intro-content{width:100%}.intro-width-guide{font-size:1.125rem}.intro-content .intro-facts{gap:30px 24px;margin:28px 0 30px}}
