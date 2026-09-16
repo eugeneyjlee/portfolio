@@ -65,3 +65,8 @@ Twenty-one original thumbnails supplied by Eugene Lee, linked to their correspon
 
 ## Additional TikTok case-study creative
 Sandbox VR video thumbnail and static paid-channel ad supplied by Eugene Lee (IMG_0005.jpg and IMG_0006.jpg). Video: https://www.instagram.com/p/DcLKsIosdh4/ . Performance figures remain within the supplied creative and describe Sandbox VR’s campaign comparison.
+
+## Company website and app visuals
+MangoBoost: live embedded official website https://www.mangoboost.io/ (headers checked September 15, 2026).
+Chime app image: https://www.chime.com/online-banking/mobile-banking/ ; official Contentful asset https://images.ctfassets.net/ao7gxs2zk32d/2Mv5UqZ1Dh0Nwv2y7GY8cm/3571b231bdbd8afaf8a97938670df9b4/content_right.png .
+Sandbox VR static-ad post supplied by Eugene: https://www.instagram.com/p/DcKizcoMnkU/ .
