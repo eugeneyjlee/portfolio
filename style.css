@@ -553,3 +553,11 @@ main h1{--text-size-step:0pt}
 @media(max-width:600px){.off-clock-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.off-clock{margin-top:56px}}
 @media print{.off-clock{margin-top:30px}}
+
+/* Linked tiles get a play badge; unlinked ones stay plain photos. */
+.off-clock-link{position:relative;display:block;border-radius:13px;overflow:hidden;color:#fff}
+.off-clock-cue{position:absolute;left:50%;top:50%;translate:-50% -50%;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#1a1a1ab8;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);transition:background .18s ease}
+.off-clock-link:hover .off-clock-cue{background:#1a1a1ae6}
+.off-clock-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.off-clock-item figcaption .arrow-up-right{vertical-align:-1px;margin-left:1px}
+@media(prefers-reduced-motion:reduce){.off-clock-cue{transition:none}}
