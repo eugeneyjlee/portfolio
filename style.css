@@ -384,3 +384,11 @@ body{position:relative;isolation:isolate}
 .intro .hand-doodle{display:inline-block;width:.9em;height:1em;margin-left:.12em;vertical-align:-.12em;color:#171717;line-height:1}
 .hand-doodle svg{display:block;width:100%;height:100%;transform:rotate(-9deg)}
 @media(max-width:650px){.background-doodles .doodle{width:28px;height:28px;opacity:.16}.intro .hand-doodle{width:.8em}}
+
+/* Varied line drawings, with deliberate breathing room. */
+.doodle-definitions{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.varied-doodle{background-image:none!important;color:#111}
+.varied-doodle svg{display:block;width:100%;height:100%;overflow:visible}
+.background-doodles .varied-doodle{width:34px;height:34px;opacity:.3}
+.spark-2{top:260px}.spark-3{top:410px}.spark-6{top:470px}
+@media(max-width:650px){.background-doodles .varied-doodle{width:20px;height:20px;opacity:.18}.spark-2{top:145px}.spark-3{top:155px}.spark-6{top:auto}}
