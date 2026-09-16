@@ -474,3 +474,18 @@ main h1{--text-size-step:0pt}
 /* Landing icons read as one horizontal row under the greeting. */
 .intro-actions.social-icons{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:6px;margin:52px 0 0}
 @media(max-width:650px){.intro-actions.social-icons{margin-top:20px;gap:9px}}
+
+/* Live Instagram players in place of cover images, mounted as each scrolls in. */
+.carousel-track{--cover-width:min(326px,80vw);gap:18px;align-items:start}
+.video-slide{flex:0 0 var(--cover-width);min-width:0}
+.reel-embed{position:relative;border-radius:13px;overflow:hidden;background:#f3f3f3;height:640px}
+.reel-embed>iframe{display:block;width:100%;height:100%;border:0;background:#fff;position:relative;z-index:1;opacity:0;transition:opacity .3s ease}
+.reel-embed.is-loaded>iframe{opacity:1}
+.reel-embed.is-stalled>iframe{display:none}
+.reel-embed-fallback{position:absolute;inset:0;z-index:2;display:block;overflow:hidden;color:#fff;text-decoration:none;background:#f3f3f3;transition:opacity .3s ease}
+.reel-embed-fallback>img{display:block;width:100%;height:100%;object-fit:cover}
+.reel-embed-fallback:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.reel-embed.is-loaded .reel-embed-fallback{opacity:0;pointer-events:none;z-index:0}
+.video-slide .video-date{margin-top:9px}
+@media(prefers-reduced-motion:reduce){.reel-embed>iframe,.reel-embed-fallback{transition:none}}
+@media(max-width:650px){.carousel-track{--cover-width:min(326px,84vw)}}
