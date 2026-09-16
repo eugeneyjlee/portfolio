@@ -534,3 +534,13 @@ main h1{--text-size-step:0pt}
 .additional-projects .project-overlay .project-outcome{font-size:calc(.875rem + var(--text-size-step, 0pt))}
 @media(max-width:1000px){.featured-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.featured-projects,.additional-projects{grid-template-columns:1fr}.project-group-label{margin-top:32px}}
+
+/* All three sections share the project-files register: a plain lowercase
+   kicker carrying the meaning, then a heading free to have character. */
+.work>.section-heading,.social>.section-heading{align-items:end;margin-bottom:16px}
+
+/* Name alias, at body size under the h1. */
+.intro-alias{margin-top:12px;font-size:calc(1rem + var(--text-size-step, 0pt));line-height:1.55;color:var(--muted);letter-spacing:-.01em}
+.intro-alias [lang="ko"]{letter-spacing:0}
+.intro-actions.social-icons{margin-top:38px}
+@media(max-width:650px){.intro-alias{margin-top:10px;font-size:calc(.9375rem + var(--text-size-step, 0pt))}}
