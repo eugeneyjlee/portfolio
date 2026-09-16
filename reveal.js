@@ -19,6 +19,7 @@
   const groups = [
     ['.nav .wordmark, .nav nav a', 0],
     ['.intro h1', 70],
+    ['.intro-alias', 95],
     ['.intro-actions a', 110],
     ['.intro-facts li', 150],
     ['.landing-photo', 190],
@@ -36,7 +37,7 @@
         popIn(entry.target, Math.min(index * 45, 180));
       });
     }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
+    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .off-clock > .section-heading, .off-clock-item, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
   }
   motion.addEventListener('change', () => {
     if (!motion.matches) return;

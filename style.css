@@ -542,3 +542,14 @@ main h1{--text-size-step:0pt}
 .intro-alias [lang="ko"]{letter-spacing:0}
 .intro-actions.social-icons{margin-top:38px}
 @media(max-width:650px){.intro-alias{margin-top:10px;font-size:calc(.9375rem + var(--text-size-step, 0pt))}}
+
+/* off the clock: a photo strip closing the page on personality. */
+.off-clock{max-width:1100px;margin-inline:auto;margin-top:100px;min-width:0}
+.off-clock-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+.off-clock-item{margin:0;min-width:0}
+.off-clock-item img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:13px;background:#f1f1f1}
+.off-clock-item figcaption{margin-top:10px;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.5;color:#666}
+@media(max-width:780px){.off-clock{margin-top:72px}.off-clock-strip{gap:16px}}
+@media(max-width:600px){.off-clock-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.off-clock{margin-top:56px}}
+@media print{.off-clock{margin-top:30px}}
