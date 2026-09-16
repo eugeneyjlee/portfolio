@@ -76,7 +76,7 @@
   motion.addEventListener('change', () => { if (motion.matches) complete(); });
 })();
 
-// Native swipe/scroll plus buttons and keyboard navigation; no autoplay.
+// Native swipe/scroll with bounded navigation and a single moving indicator.
 (() => {
   const root = document.querySelector('.video-carousel');
   if (!root) return;
@@ -84,35 +84,35 @@
   const slides = [...track.querySelectorAll('.video-slide')];
   const previous = root.querySelector('.carousel-prev');
   const next = root.querySelector('.carousel-next');
-  const dots = [...root.querySelectorAll('[data-slide]')];
+  const indicator = root.querySelector('.carousel-progress span');
   const status = root.querySelector('.carousel-status');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let current = 0;
-  const positions = () => slides.map(slide => Math.min(slide.offsetLeft, track.scrollWidth - track.clientWidth));
   const update = () => {
-    const points = positions();
-    current = points.reduce((best, point, i) => Math.abs(point - track.scrollLeft) < Math.abs(points[best] - track.scrollLeft) ? i : best, 0);
-    previous.disabled = track.scrollLeft < 2;
-    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
-    dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
-    status.textContent = `${current + 1} / ${slides.length}`;
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    const left = Math.max(0, Math.min(max, track.scrollLeft));
+    previous.disabled = left < 2;
+    next.disabled = left >= max - 2;
+    const visibleFraction = Math.min(1, track.clientWidth / track.scrollWidth);
+    indicator.style.width = `${visibleFraction * 100}%`;
+    indicator.style.marginLeft = `${max ? left / max * (1 - visibleFraction) * 100 : 0}%`;
+    const first = slides.reduce((best, slide, i) => Math.abs(slide.offsetLeft - left) < Math.abs(slides[best].offsetLeft - left) ? i : best, 0);
+    status.textContent = `${next.disabled ? slides.length : first + 1} / ${slides.length}`;
   };
-  const go = (index) => {
-    const bounded = Math.max(0, Math.min(slides.length - 1, index));
-    track.scrollTo({ left: positions()[bounded], behavior: motion.matches ? 'instant' : 'smooth' });
+  const move = (direction) => {
+    const step = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth;
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    track.scrollTo({left: Math.max(0, Math.min(max, track.scrollLeft + direction * step)), behavior: motion.matches ? 'instant' : 'smooth'});
   };
-  previous.addEventListener('click', () => go(current - 1));
-  next.addEventListener('click', () => go(current + 1));
-  dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
   track.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
       event.preventDefault();
-      go(current + (event.key === 'ArrowRight' ? 1 : -1));
+      move(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
-  track.addEventListener('scroll', update, { passive: true });
+  track.addEventListener('scroll', update, {passive: true});
   window.addEventListener('resize', update);
   root.querySelector('.carousel-controls').hidden = false;
-  root.querySelector('.carousel-dots').hidden = false;
   update();
 })();
