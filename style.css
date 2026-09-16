@@ -436,3 +436,16 @@ main h1{--text-size-step:0pt}
  .background-doodles .varied-doodle{width:16px;height:16px;opacity:.24;left:0}
  .background-doodles .varied-doodle:nth-child(even){left:auto;right:0}
 }
+
+/* Featured TikTok layout with the two supporting roles beneath it. */
+.visual-experiences{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 28px}
+.visual-experiences .tiktok{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);gap:36px;align-items:start}
+.tiktok .work-copy{padding-top:0}
+.visual-experiences .mangoboost,.visual-experiences .chime{display:flex;flex-direction:column}
+.mangoboost .work-copy,.chime .work-copy{order:1;padding-top:0}
+.mangoboost .work-visual,.chime .work-visual{order:2;margin-top:20px}
+.work-copy .role + .summary{margin-top:18px}
+.paid-assets{align-items:flex-start}
+@media(max-width:800px){.visual-experiences .tiktok{grid-template-columns:minmax(0,1.2fr) minmax(240px,1fr);gap:24px}}
+@media(max-width:650px){.visual-experiences{grid-template-columns:1fr}.visual-experiences .tiktok{display:block}.tiktok .work-copy{padding-top:20px}}
+
