@@ -62,3 +62,6 @@ THE SOFTWARE.
 
 ## Berkeley Life video thumbnails
 Twenty-one original thumbnails supplied by Eugene Lee, linked to their corresponding UC Berkeley Life Instagram Reels. Replaces the carousel mockup covers.
+
+## Additional TikTok case-study creative
+Sandbox VR video thumbnail and static paid-channel ad supplied by Eugene Lee (IMG_0005.jpg and IMG_0006.jpg). Video: https://www.instagram.com/p/DcLKsIosdh4/ . Performance figures remain within the supplied creative and describe Sandbox VR’s campaign comparison.
