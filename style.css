@@ -574,3 +574,38 @@ main h1{--text-size-step:0pt}
 .off-clock-label{margin:26px 0 12px}
 .off-clock-label:first-of-type{margin-top:4px}
 .off-clock-strip+.off-clock-label{margin-top:30px}
+/* off the clock: single-row redesign */
+.off-clock-strip--single{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:end}
+.off-clock-strip--single .off-clock-item figcaption{display:flex;flex-direction:column;gap:2px}
+.off-clock-strip--single .off-clock-item figcaption strong{font-family:inherit;font-weight:600;color:#333}
+.off-clock-strip--single .off-clock-link img{transition:transform .35s ease}
+.off-clock-strip--single .off-clock-link:hover img{transform:scale(1.03)}
+@media(max-width:820px){.off-clock-strip--single{grid-template-columns:repeat(2,minmax(0,1fr))}.off-clock-strip--single .off-clock-item--wide{grid-column:1/-1}.off-clock-strip--single .off-clock-item--wide img{aspect-ratio:5/3}}
+@media(prefers-reduced-motion:reduce){.off-clock-strip--single .off-clock-link img{transition:none}}
+.off-clock-strip--life{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:820px){.off-clock-strip--life{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* off camera: cheer + concert collage */
+.off-clock-life>.off-clock-item--wide{grid-column:auto}
+.off-clock-life{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;align-items:center}
+.off-clock-life .off-clock-item figcaption{display:flex;flex-direction:column;gap:2px}
+.off-clock-life .off-clock-item figcaption strong,.shows-caption strong{font-weight:600;color:#333}
+.shows-collage{position:relative;aspect-ratio:16/11.5;margin:8px 10px 44px}
+.show-print{position:absolute;margin:0;background:#fff;padding:7px 7px 0;border-radius:3px;box-shadow:0 1px 2px #0000001a,0 8px 22px #00000024;rotate:var(--r,0deg);transition:rotate .25s ease,scale .25s ease,box-shadow .25s ease}
+.show-print img{display:block;width:100%;height:auto;border-radius:1px;background:#eee}
+.show-print figcaption{font-family:var(--mono);font-size:calc(.6875rem + var(--text-size-step, 0pt));color:#555;padding:6px 2px 7px;line-height:1.2}
+.show-print:hover{rotate:0deg;scale:1.05;z-index:10;box-shadow:0 2px 4px #0000001f,0 18px 40px #00000033}
+.show-print--bigbang{left:0;top:2%;width:46%;--r:-3deg;z-index:2}
+.show-print--lolla{left:43%;top:0;width:25%;--r:4deg;z-index:3}
+.show-print--lauv{left:66%;top:6%;width:34%;--r:-2deg;z-index:2}
+.show-print--baekhyun{left:2%;top:57%;width:34%;--r:2deg;z-index:4}
+.show-print--zucker{left:37%;top:58%;width:24%;--r:-4deg;z-index:5}
+.show-print--cho{left:62%;top:56%;width:36%;--r:3deg;z-index:4}
+.shows-caption{display:flex;flex-direction:column;gap:2px;margin-top:22px;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.5;color:#666}
+@media(max-width:900px){.off-clock-life{grid-template-columns:minmax(0,1fr);gap:36px}.off-clock-life>.off-clock-item{max-width:520px}}
+@media(max-width:640px){.shows-collage{aspect-ratio:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 4px 18px;margin:0 -4px}.show-print{position:static;flex:0 0 62%;width:auto;scroll-snap-align:center;align-self:center}.show-print:hover{scale:1}.shows-caption{margin-top:6px}.shows-collage{margin-bottom:0}}
+@media(prefers-reduced-motion:reduce){.show-print{transition:none}}
+/* cheer + club stack */
+.off-clock-stack{display:flex;flex-direction:column;gap:28px;min-width:0}
+.off-clock-stack .off-clock-item figcaption{display:flex;flex-direction:column;gap:2px}
+.off-clock-stack .off-clock-item figcaption strong{font-weight:600;color:#333}
+@media(max-width:900px){.off-clock-stack{max-width:520px}}
