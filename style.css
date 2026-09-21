@@ -609,3 +609,23 @@ main h1{--text-size-step:0pt}
 .off-clock-stack .off-clock-item figcaption{display:flex;flex-direction:column;gap:2px}
 .off-clock-stack .off-clock-item figcaption strong{font-weight:600;color:#333}
 @media(max-width:900px){.off-clock-stack{max-width:520px}}
+
+/* off the clock: folded by default, opened by the invitation button. */
+.off-clock-toggle{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;padding:8px 0 4px;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.off-clock-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:var(--radius)}
+.off-clock-toggle-doodle{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;color:#a8a8a8;transition:color .25s ease,background .25s ease,transform .45s cubic-bezier(.22,.7,.3,1);animation:off-clock-float 4.5s ease-in-out infinite}
+.off-clock-toggle-doodle svg{width:46px;height:46px}
+@keyframes off-clock-float{0%,100%{translate:0 0}50%{translate:0 -5px}}
+.off-clock-toggle:hover .off-clock-toggle-doodle,.off-clock-toggle:focus-visible .off-clock-toggle-doodle{color:var(--accent);background:#0000000f;transform:scale(1.07) rotate(-4deg)}
+.off-clock-toggle[aria-expanded="true"] .off-clock-toggle-doodle{animation:none;color:var(--accent)}
+.off-clock-toggle-text{max-width:34ch;font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step, 0pt));line-height:1.7;text-align:center;text-wrap:balance;color:var(--muted);transition:color .2s ease}
+.off-clock-toggle:hover .off-clock-toggle-text,.off-clock-toggle[aria-expanded="true"] .off-clock-toggle-text{color:var(--ink)}
+@media(max-width:600px){.off-clock-toggle{gap:14px}.off-clock-toggle-text{font-size:calc(.75rem + var(--text-size-step, 0pt))}.off-clock-toggle-doodle{width:68px;height:68px}.off-clock-toggle-doodle svg{width:40px;height:40px}}
+.off-clock-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s cubic-bezier(.22,.7,.3,1)}
+.off-clock-body[hidden]{display:none}
+.off-clock-body.is-open{grid-template-rows:1fr}
+.off-clock-body-inner{min-height:0;overflow:hidden}
+.off-clock-body-inner>.projects-intro{margin-top:30px}
+
+@media(prefers-reduced-motion:reduce){.off-clock-toggle-text,.off-clock-toggle-doodle,.off-clock-body{transition:none}.off-clock-toggle-doodle{animation:none}}
+@media print{.off-clock-toggle{display:none}.off-clock-body{display:block}.off-clock-body[hidden]{display:block}.off-clock-body-inner{overflow:visible}}

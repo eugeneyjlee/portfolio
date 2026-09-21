@@ -37,7 +37,7 @@
         popIn(entry.target, Math.min(index * 45, 180));
       });
     }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .off-clock > .section-heading, .off-clock-item, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
+    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .off-clock-toggle, .off-clock-item, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
   }
   motion.addEventListener('change', () => {
     if (!motion.matches) return;
@@ -89,4 +89,40 @@
   window.addEventListener('resize', update);
   root.querySelector('.carousel-controls').hidden = false;
   update();
+})();
+
+// Off the clock stays folded until you ask for it.
+(() => {
+  const toggle = document.querySelector('.off-clock-toggle');
+  const body = document.getElementById('off-clock-body');
+  if (!toggle || !body) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const open = () => {
+    if (toggle.getAttribute('aria-expanded') === 'true') return;
+    body.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    requestAnimationFrame(() => body.classList.add('is-open'));
+  };
+  const close = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    body.classList.remove('is-open');
+    if (motion.matches) {
+      body.hidden = true;
+      return;
+    }
+    body.addEventListener('transitionend', function done(event) {
+      if (event.target !== body) return;
+      body.removeEventListener('transitionend', done);
+      if (!body.classList.contains('is-open')) body.hidden = true;
+    });
+  };
+  toggle.addEventListener('click', () => {
+    toggle.getAttribute('aria-expanded') === 'true' ? close() : open();
+  });
+  // A direct link to the section should land on the unfolded version.
+  const openFromHash = () => {
+    if (location.hash === '#off-the-clock') open();
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 })();
