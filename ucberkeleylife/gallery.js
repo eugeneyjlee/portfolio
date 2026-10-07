@@ -1,11 +1,8 @@
-document.querySelectorAll('.archive-player button').forEach(button => {
-  button.addEventListener('click', () => {
-    const frame = document.createElement('iframe');
-    frame.src = 'https://www.instagram.com/reel/' + button.dataset.reel + '/embed/';
-    frame.title = button.getAttribute('aria-label').replace('Load ', '');
-    frame.allow = 'encrypted-media; picture-in-picture; fullscreen';
-    frame.setAttribute('allowfullscreen', '');
-    frame.setAttribute('scrolling', 'no');
-    button.parentElement.replaceChildren(frame);
+// Instagram's embed uses a 326px minimum layout. Scale it to each compact card.
+const players = document.querySelectorAll('.instagram-player');
+const resizeEmbeds = new ResizeObserver(entries => {
+  entries.forEach(({target, contentRect}) => {
+    target.style.setProperty('--embed-scale', contentRect.width / 326);
   });
 });
+players.forEach(player => resizeEmbeds.observe(player));
