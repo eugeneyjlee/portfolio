@@ -160,5 +160,76 @@
     }
   ],
   "total_views": 1286900,
-  "total_note": "Approximate total summed from rounded public Instagram view labels."
+  "total_note": "Approximate total summed from rounded public Instagram view labels.",
+  "tiktok": {
+    "source": "Public TikTok video pages: itemStruct.stats.playCount",
+    "updated": "2026-10-07",
+    "videos": [
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7478404203367583022",
+        "views": 6905,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7473216070401248555",
+        "views": 11600,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7669884477379808543",
+        "views": 9264,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7577125289856159007",
+        "views": 6895,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7488047995951369514",
+        "views": 5885,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7367590877344238894",
+        "views": 5112,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7468722010147818795",
+        "views": 7353,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7388190126305824042",
+        "views": 8110,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7680604140946459934",
+        "views": 3355,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7689549849712135454",
+        "views": 10900,
+        "updated": "2026-10-07"
+      },
+      {
+        "url": "https://www.tiktok.com/@ucberkeley/video/7558925702599380254",
+        "views": 18400,
+        "updated": "2026-10-07"
+      }
+    ],
+    "total_views": 93779
+  },
+  "combined": {
+    "published_videos": 33,
+    "instagram_videos": 22,
+    "tiktok_videos": 11,
+    "total_views": 1380679,
+    "portfolio_display": "1.38M+",
+    "updated": "2026-10-07",
+    "note": "Counts platform publications, including cross-posts. Approximate view total combines rounded public Instagram counts and TikTok play counts."
+  }
 }
