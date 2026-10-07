@@ -5,14 +5,22 @@
   "display": "Rounded down to whole thousands",
   "videos": [
     {
+      "url": "https://www.instagram.com/reel/DduJhBzzXH5/",
+      "observed_display": "63.2K",
+      "portfolio_display": "63K",
+      "updated": "2026-10-07"
+    },
+    {
       "url": "https://www.instagram.com/reel/Dcubskth0kQ/",
-      "observed_display": "32.4K",
-      "portfolio_display": "32K"
+      "observed_display": "32.8K",
+      "portfolio_display": "32K",
+      "updated": "2026-10-07"
     },
     {
       "url": "https://www.instagram.com/reel/DchXm56PNRD/",
-      "observed_display": "266K",
-      "portfolio_display": "266K"
+      "observed_display": "269K",
+      "portfolio_display": "269K",
+      "updated": "2026-10-07"
     },
     {
       "url": "https://www.instagram.com/reel/DblslzRPy1R/",
@@ -109,5 +117,6 @@
       "observed_display": "30.3K",
       "portfolio_display": "30K"
     }
-  ]
+  ],
+  "latest_partial_update": "2026-10-07"
 }

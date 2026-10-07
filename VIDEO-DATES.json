@@ -3,6 +3,12 @@
   "display_timezone": "America/Los_Angeles",
   "videos": [
     {
+      "url": "https://www.instagram.com/reel/DduJhBzzXH5/",
+      "published_at": "2026-09-25T18:57:48.000Z",
+      "display_date_pacific": "Sep 25, 2026",
+      "verified": "2026-10-07"
+    },
+    {
       "url": "https://www.instagram.com/reel/Dcubskth0kQ/",
       "published_at": "2026-09-01T01:47:53.000Z",
       "display_date_pacific": "Aug 31, 2026"
