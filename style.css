@@ -502,9 +502,21 @@ main h1{--text-size-step:0pt}
 .video-tag{display:inline-block;margin:12px 0 0;padding:4px 10px;border-radius:100px;background:#f1f1f1;font-family:var(--mono);font-size:calc(.6875rem + var(--text-size-step, 0pt));line-height:1.5;color:#4a4a4a}
 .video-title{margin:9px 0 0;font-size:calc(1rem + var(--text-size-step, 0pt));font-weight:500;line-height:1.4;letter-spacing:-.01em}
 .social .video-slide .video-date{margin-top:5px}
-.social-more{margin-top:22px}
-.social-more a{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step, 0pt));color:var(--ink);text-decoration:none;border-bottom:1px solid #c9c9c9;padding-bottom:2px}
-.social-more a:hover{color:var(--accent);border-bottom-color:currentColor}
+/* The full gallery is offered twice: up front beside the heading, and as the
+   card the carousel ends on, where someone who swiped through lands. */
+.social-all{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 14px;border:1px solid var(--line);border-radius:100px;background:#fff;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));color:var(--ink);text-decoration:none;white-space:nowrap;transition:border-color .2s ease,color .2s ease}
+.social-all:hover{color:var(--accent);border-color:currentColor}
+.social-all span{transition:transform .2s ease}.social-all:hover span{transform:translateX(3px)}
+.carousel-more{flex:0 0 var(--cover-width);height:640px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px;padding:28px;box-sizing:border-box;border:1px dashed #cfcfcf;border-radius:13px;background:#f6f6f6;color:var(--ink);text-decoration:none;scroll-snap-align:start;transition:background .2s ease,border-color .2s ease}
+.carousel-more:hover{background:#efefef;border-color:var(--accent);color:var(--ink)}
+.carousel-more:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.carousel-more-count{font-size:calc(3.5rem + var(--text-size-step, 0pt));font-weight:500;line-height:1;letter-spacing:-.05em}
+.carousel-more-label{font-size:calc(1.15rem + var(--text-size-step, 0pt));font-weight:500;letter-spacing:-.01em}
+.carousel-more-sub{font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step, 0pt));color:#777}
+.carousel-more-cta{margin-top:22px;display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:100px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step, 0pt))}
+.carousel-more-cta span{transition:transform .2s ease}.carousel-more:hover .carousel-more-cta span{transform:translateX(3px)}
+@media(max-width:520px){.social>.section-heading{flex-wrap:wrap;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.social-all span,.carousel-more-cta span,.carousel-more{transition:none}}
 @media(max-width:780px){.social{margin-top:72px}}
 @media(max-width:520px){.social{margin-top:56px}}
 @media print{.social{margin-top:30px}}
