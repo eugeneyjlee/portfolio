@@ -21,7 +21,7 @@
     }
   },
   "total_public_engagements": 23526,
-  "portfolio_display": "23.5K+",
+  "portfolio_display": "≈27K",
   "unavailable": {
     "Instagram": [
       "Shares and saves for all 22 reels",
@@ -359,5 +359,14 @@
       "shares": 2,
       "saves": 10
     }
-  ]
+  ],
+  "estimate": {
+    "total_engagements": 27055,
+    "observed_engagements": 23526,
+    "modeled_instagram_shares_and_saves": 3529,
+    "method": "Multiply observed Instagram likes and comments (19,953) by the TikTok shares-plus-saves to likes-plus-comments ratio (537 / 3,036), round to 3,529, and add the 23,526 observed engagements.",
+    "assumption": "Instagram shares and saves follow the same proportion of likes and comments as these TikTok posts; this is a modeling assumption, not a measured Instagram count.",
+    "exclusions": "Unavailable Instagram likes on two reels are excluded.",
+    "display": "≈27K estimated engagements"
+  }
 }
