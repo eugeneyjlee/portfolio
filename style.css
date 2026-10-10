@@ -641,3 +641,6 @@ main h1{--text-size-step:0pt}
 
 @media(prefers-reduced-motion:reduce){.off-clock-toggle-text,.off-clock-toggle-doodle,.off-clock-body{transition:none}.off-clock-toggle-doodle{animation:none}}
 @media print{.off-clock-toggle{display:none}.off-clock-body{display:block}.off-clock-body[hidden]{display:block}.off-clock-body-inner{overflow:visible}}
+
+/* Public engagement scope, shown beside the campus content metrics. */
+.public-engagement-note{max-width:900px;margin:12px 0 24px;font-family:var(--mono);font-size:calc(.6875rem + var(--text-size-step, 0pt));line-height:1.65;color:#777}

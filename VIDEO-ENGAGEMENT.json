@@ -1,0 +1,363 @@
+{
+  "updated": "2026-10-09",
+  "type": "Public snapshot, not live; available counts only",
+  "definition": "Public counts only: Instagram likes and comments; TikTok likes, comments, shares, and saves. Unavailable counts excluded.",
+  "sources": {
+    "Instagram": "Public reel embed counts",
+    "TikTok": "Public video pages: itemStruct.stats"
+  },
+  "platform_totals": {
+    "Instagram": {
+      "likes": 19454,
+      "comments": 499,
+      "shares": 0,
+      "saves": 0
+    },
+    "TikTok": {
+      "likes": 2956,
+      "comments": 80,
+      "shares": 251,
+      "saves": 286
+    }
+  },
+  "total_public_engagements": 23526,
+  "portfolio_display": "23.5K+",
+  "unavailable": {
+    "Instagram": [
+      "Shares and saves for all 22 reels",
+      "Likes for Dcubskth0kQ and DPjxEpWkrYg"
+    ]
+  },
+  "videos": [
+    {
+      "platform": "Instagram",
+      "title": "Qualcomm Café: A New Campus Bite",
+      "id": "DduJhBzzXH5",
+      "url": "https://www.instagram.com/reel/DduJhBzzXH5/",
+      "likes": 697,
+      "comments": 12,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "My Last First Week at UC Berkeley",
+      "id": "Dcubskth0kQ",
+      "url": "https://www.instagram.com/reel/Dcubskth0kQ/",
+      "likes": null,
+      "comments": 8,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "First Day of School Outfits",
+      "id": "DchXm56PNRD",
+      "url": "https://www.instagram.com/reel/DchXm56PNRD/",
+      "likes": 4059,
+      "comments": 62,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Are These Items Worth It?",
+      "id": "DblslzRPy1R",
+      "url": "https://www.instagram.com/reel/DblslzRPy1R/",
+      "likes": 725,
+      "comments": 6,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "This or That: UC Berkeley Picks",
+      "id": "DU1NgvngTAq",
+      "url": "https://www.instagram.com/reel/DU1NgvngTAq/",
+      "likes": 1248,
+      "comments": 12,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Thankful Moments at UC Berkeley",
+      "id": "DRiEGGeD7k5",
+      "url": "https://www.instagram.com/reel/DRiEGGeD7k5/",
+      "likes": 1577,
+      "comments": 32,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "3 Telegraph Eats That Ate. Literally.",
+      "id": "DPjxEpWkrYg",
+      "url": "https://www.instagram.com/reel/DPjxEpWkrYg/",
+      "likes": null,
+      "comments": 8,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "What’s Inside the Campanile?",
+      "id": "DKsONg-voXn",
+      "url": "https://www.instagram.com/reel/DKsONg-voXn/",
+      "likes": 556,
+      "comments": 1,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Telegraph Boba Day 2025",
+      "id": "DI4R0kUzGA1",
+      "url": "https://www.instagram.com/reel/DI4R0kUzGA1/",
+      "likes": 703,
+      "comments": 222,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Why We Chose UC Berkeley",
+      "id": "DH32-wOvyjE",
+      "url": "https://www.instagram.com/reel/DH32-wOvyjE/",
+      "likes": 1822,
+      "comments": 30,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Come With Us to Local x Design",
+      "id": "DG1BszcyHA1",
+      "url": "https://www.instagram.com/reel/DG1BszcyHA1/",
+      "likes": 338,
+      "comments": 10,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Walking Through the UC Berkeley Campus",
+      "id": "DGQ_-0gymOB",
+      "url": "https://www.instagram.com/reel/DGQ_-0gymOB/",
+      "likes": 930,
+      "comments": 10,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Day in the Life as a UC Berkeley Sophomore",
+      "id": "DFyMPOMzfL2",
+      "url": "https://www.instagram.com/reel/DFyMPOMzfL2/",
+      "likes": 646,
+      "comments": 4,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "How Did You Choose Your Major?",
+      "id": "DDu8587zatR",
+      "url": "https://www.instagram.com/reel/DDu8587zatR/",
+      "likes": 818,
+      "comments": 7,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Trying to Be in the Cal Band for a Day",
+      "id": "DB9mC52Sv60",
+      "url": "https://www.instagram.com/reel/DB9mC52Sv60/",
+      "likes": 707,
+      "comments": 19,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "What Did You Bring to Berkeley?",
+      "id": "DBelgERSdLd",
+      "url": "https://www.instagram.com/reel/DBelgERSdLd/",
+      "likes": 640,
+      "comments": 11,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "UC Berkeley Study Tips",
+      "id": "DBMicDkyTT1",
+      "url": "https://www.instagram.com/reel/DBMicDkyTT1/",
+      "likes": 865,
+      "comments": 7,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "First Year Fundamentals: Packing Smart",
+      "id": "C-ddu54hoEy",
+      "url": "https://www.instagram.com/reel/C-ddu54hoEy/",
+      "likes": 736,
+      "comments": 6,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "First Year Fundamentals: Campus Resources",
+      "id": "C95V77eySKy",
+      "url": "https://www.instagram.com/reel/C95V77eySKy/",
+      "likes": 407,
+      "comments": 2,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "UC Berkeley Enrollment Tips",
+      "id": "C85Asy-SLvM",
+      "url": "https://www.instagram.com/reel/C85Asy-SLvM/",
+      "likes": 635,
+      "comments": 4,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Best Matcha Places Around Berkeley",
+      "id": "C8aDx1av3hV",
+      "url": "https://www.instagram.com/reel/C8aDx1av3hV/",
+      "likes": 750,
+      "comments": 21,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "Instagram",
+      "title": "Telegraph Boba Day 2024",
+      "id": "C6J4xuAJx4B",
+      "url": "https://www.instagram.com/reel/C6J4xuAJx4B/",
+      "likes": 595,
+      "comments": 5,
+      "shares": null,
+      "saves": null
+    },
+    {
+      "platform": "TikTok",
+      "title": "NEW DINING LOCATION DROPPED!! ‼️ Qualcomm Café is your new favorite spot on campus serving fresh bites.  Tag a friend who has to take you here 👀",
+      "id": "7689549849712135454",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7689549849712135454",
+      "likes": 395,
+      "comments": 14,
+      "shares": 80,
+      "saves": 46
+    },
+    {
+      "platform": "TikTok",
+      "title": "This is how the first week of school looks for a UC Berkeley senior! Come with Eugene as she kicks off the fall semester. 🐻📚",
+      "id": "7680604140946459934",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7680604140946459934",
+      "likes": 113,
+      "comments": 9,
+      "shares": 3,
+      "saves": 7
+    },
+    {
+      "platform": "TikTok",
+      "title": "Do you think these items are worth UC Berkeley students’ money? 🤔 Share your thoughts in the comments!",
+      "id": "7669884477379808543",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7669884477379808543",
+      "likes": 459,
+      "comments": 8,
+      "shares": 50,
+      "saves": 119
+    },
+    {
+      "platform": "TikTok",
+      "title": "It’s the season of giving thanks!  🍁🍂 We asked UC Berkeley students, “Who or what are you thankful for?” Tag someone you’re thankful for in the comments!",
+      "id": "7577125289856159007",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7577125289856159007",
+      "likes": 184,
+      "comments": 6,
+      "shares": 7,
+      "saves": 6
+    },
+    {
+      "platform": "TikTok",
+      "title": "🚨ATTENTION! 3 new spots on Berkeley’s Telegraph Avenue just dropped!🍦🥗🍵 Which one are you trying first? @Theyardmilkshakebar, @Everytable, or De Matcha!",
+      "id": "7558925702599380254",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7558925702599380254",
+      "likes": 112,
+      "comments": 6,
+      "shares": 12,
+      "saves": 11
+    },
+    {
+      "platform": "TikTok",
+      "title": "What’s your favorite thing about UC Berkeley? 💛💙 We asked some Golden Bears, and everyone has found something special here. Admitted students, Cal Day is on April 19th so you can start discovering yours! Come see for yourself and explore all the opportunities and resources waiting for you at UC Berkeley. See you there! 🐻✨",
+      "id": "7488047995951369514",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7488047995951369514",
+      "likes": 213,
+      "comments": 9,
+      "shares": 13,
+      "saves": 18
+    },
+    {
+      "platform": "TikTok",
+      "title": "Heard about the newest dining spot on the UC Berkeley campus? 👀 Check out Local x Design inside Bauer Wurster Hall! They’ve got menus for breakfast and lunch, and if you want to try the Boichik Bagel, tag a friend whose name starts with B and they’ll have to get you one! 🥯😉",
+      "id": "7478404203367583022",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7478404203367583022",
+      "likes": 140,
+      "comments": 3,
+      "shares": 16,
+      "saves": 12
+    },
+    {
+      "platform": "TikTok",
+      "title": "Let’s take a stroll through the UC Berkeley campus ✨🍃",
+      "id": "7473216070401248555",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7473216070401248555",
+      "likes": 481,
+      "comments": 13,
+      "shares": 39,
+      "saves": 17
+    },
+    {
+      "platform": "TikTok",
+      "title": "Ever wondered what it's like to be a sophomore at UC Berkeley?  Eugene is taking us along for a day in her life on campus! 🐻📚",
+      "id": "7468722010147818795",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7468722010147818795",
+      "likes": 262,
+      "comments": 4,
+      "shares": 11,
+      "saves": 17
+    },
+    {
+      "platform": "TikTok",
+      "title": "going to the uc botanical gardens cures all of my stress.🌵",
+      "id": "7388190126305824042",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7388190126305824042",
+      "likes": 424,
+      "comments": 4,
+      "shares": 18,
+      "saves": 23
+    },
+    {
+      "platform": "TikTok",
+      "title": "We are blue and gold 💛💙",
+      "id": "7367590877344238894",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7367590877344238894",
+      "likes": 173,
+      "comments": 4,
+      "shares": 2,
+      "saves": 10
+    }
+  ]
+}
