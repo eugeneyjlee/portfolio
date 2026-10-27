@@ -641,3 +641,10 @@ main h1{--text-size-step:0pt}
 
 @media(prefers-reduced-motion:reduce){.off-clock-toggle-text,.off-clock-toggle-doodle,.off-clock-body{transition:none}.off-clock-toggle-doodle{animation:none}}
 @media print{.off-clock-toggle{display:none}.off-clock-body{display:block}.off-clock-body[hidden]{display:block}.off-clock-body-inner{overflow:visible}}
+
+/* MangoBoost LinkedIn video embeds */
+.mangoboost .mango-videos{display:grid;gap:20px;width:100%;min-width:0;background:transparent;overflow:visible}
+.mango-video{width:100%;max-width:504px;min-width:0;margin-inline:auto;overflow:hidden;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+.mango-video iframe{display:block;width:100%;max-width:100%;border:0;background:#fff}
+.mango-video>a{display:block;padding:10px 14px;font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.5;text-decoration:none}
+.mango-video>a:hover{text-decoration:underline}
