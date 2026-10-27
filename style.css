@@ -648,3 +648,21 @@ main h1{--text-size-step:0pt}
 .mango-video iframe{display:block;width:100%;max-width:100%;border:0;background:#fff}
 .mango-video>a{display:block;padding:10px 14px;font-size:calc(.75rem + var(--text-size-step, 0pt));line-height:1.5;text-decoration:none}
 .mango-video>a:hover{text-decoration:underline}
+
+/* Consistent company rows keep each media collection beside its description. */
+#work .visual-experiences{grid-template-columns:minmax(0,1fr);gap:40px}
+#work .visual-experiences>.experience-card{display:grid;grid-column:auto;grid-template-columns:minmax(240px,.85fr) minmax(0,2fr);gap:40px;align-items:start}
+#work .visual-experiences>.experience-card+.experience-card{padding-top:40px;border-top:1px solid var(--line)}
+#work .visual-experiences>.experience-card>.work-copy{grid-column:1;grid-row:1;order:initial;padding-top:0}
+#work .visual-experiences>.experience-card>.work-visual{grid-column:2;grid-row:1;order:initial;margin-top:0;width:100%;min-width:0}
+#work .mango-videos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:900px){
+#work .visual-experiences>.experience-card{grid-template-columns:minmax(0,1fr);gap:22px}
+#work .visual-experiences>.experience-card>.work-copy{grid-column:1;grid-row:1;max-width:65ch}
+#work .visual-experiences>.experience-card>.work-visual{grid-column:1;grid-row:2}
+}
+@media(max-width:600px){
+#work .visual-experiences{gap:32px}
+#work .visual-experiences>.experience-card+.experience-card{padding-top:32px}
+#work .mango-videos{grid-template-columns:minmax(0,1fr)}
+}
