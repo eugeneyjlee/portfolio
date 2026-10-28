@@ -1,0 +1,45 @@
+/* Shared grid tracks align every part of each project card. */
+#projects{container-type:inline-size;width:calc(100vw - 160px);max-width:none;margin-left:calc(50% - 50vw + 80px)}
+#projects .project-files-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,68px 24px auto 40px auto auto 1fr);gap:12px 28px;align-items:stretch}
+#projects .project-file{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:12px;min-width:0;padding:32px;border:0;border-radius:20px;background:var(--project-tint,#f8f8f6);overflow:hidden;box-shadow:none}
+#projects .project-file:last-child{grid-column:auto}
+#projects [data-brand="cider"]{--project-tint:#fff5f7}
+#projects [data-brand="paypal"]{--project-tint:#f2f6ff}
+#projects [data-brand="tiktok"]{--project-tint:#f0faf9}
+#projects [data-brand="venmo"]{--project-tint:#f0f7ff}
+#projects [data-brand="equinox"]{--project-tint:#f5f5f1}
+#projects [data-brand="liner"]{--project-tint:#f5f8ee}
+#projects .project-file-heading{min-width:0;padding:0;align-self:start}
+#projects .overlay-heading{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:center;gap:12px;width:100%;margin:0}
+#projects .overlay-heading .cover-logos{display:flex;align-items:center;gap:8px;width:104px;height:36px;margin:0}
+#projects .overlay-heading .cover-logos img{display:block;width:104px;height:36px;max-width:104px;max-height:36px;object-fit:contain;object-position:left center;flex-shrink:0}
+#projects .overlay-heading .cover-logos:has(img + img) img{width:44px;max-width:44px;object-position:center}
+#projects .overlay-heading .cover-logos .project-wordmark{object-fit:cover;object-position:center}
+#projects .overlay-topic{font-family:var(--mono);font-size:.72rem;line-height:1.5;white-space:nowrap;text-align:right;color:#555;justify-self:end}
+#projects .project-meta{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:3px 24px}
+#projects .project-confidential{font-family:var(--mono);font-size:.55rem;letter-spacing:.02em;line-height:1.5;color:#666;margin:0}
+#projects .project-media-tabs{display:flex;align-items:center;gap:16px;min-width:0}
+#projects .project-media-tabs button{padding:3px 0;border:0;border-bottom:1px solid transparent;background:transparent;font-family:var(--mono);font-size:.7rem;line-height:1.4;color:#777;cursor:pointer;white-space:nowrap}
+#projects .project-media-tabs button[aria-selected="true"]{border-bottom-color:#333;color:#222}
+#projects .project-media-stage{position:relative;height:calc((100cqw - 248px)*.1875);min-width:0;width:100%;overflow:hidden}
+#projects .project-preview{position:absolute;inset:0}
+#projects .project-preview img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:transparent}
+#projects [data-brand="liner"] .project-preview img,#projects [data-brand="equinox"] .project-preview:first-child img{object-fit:cover}
+#projects .project-media-actions{display:flex;align-items:center;min-width:0}
+#projects .prototype-try{display:flex;align-items:center;justify-content:center;width:100%;height:40px;margin:0;padding:8px 12px;border:1px solid #333;border-radius:7px;background:transparent;color:#222;font-size:.8rem;line-height:1.3;text-align:center;text-decoration:none}
+#projects .prototype-try:hover{background:#222;color:#fff}
+#projects [hidden]{display:none!important}
+#projects a:focus-visible,#projects button:focus-visible{outline:3px solid #6b74bb;outline-offset:3px}
+#projects .project-reference{font-size:.7rem;line-height:1.5;color:#686868;margin:0}
+#projects .project-file>h3{font-size:calc(1.125rem + var(--text-size-step,0pt));line-height:1.35;letter-spacing:-.025em;margin:4px 0 0;align-self:start}
+#projects .project-role{font-family:inherit;font-size:calc(.75rem + var(--text-size-step,0pt));line-height:1.5;color:#616161;margin:-8px 0 0;align-self:start}
+#projects .project-outcome{font-size:calc(.875rem + var(--text-size-step,0pt));line-height:1.65;color:#444;margin:4px 0 0;align-self:start}
+@media(max-width:1100px){#projects{width:calc(100vw - 80px);margin-left:calc(50% - 50vw + 40px)}#projects .project-files-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,68px 24px auto 40px auto auto 1fr);gap:12px 24px}}
+@media(max-width:650px){#projects{width:calc(100vw - 48px);margin-left:calc(50% - 50vw + 24px)}#projects .project-files-grid{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:auto;gap:24px}#projects .project-file{grid-row:auto;grid-template-rows:48px 28px auto 40px auto auto auto;padding:28px;row-gap:12px}#projects .project-media-tabs{gap:12px}#projects .project-media-tabs button{font-size:.65rem}}
+
+@media(max-width:1100px) and (min-width:651px){#projects .project-media-stage{height:calc((100cqw - 152px)*.28125)}}
+@media(max-width:650px){#projects .project-media-stage{height:calc((100cqw - 56px)*.5625)}}
+
+#projects [data-brand="venmo"] .overlay-heading,#projects [data-brand="equinox"] .overlay-heading{grid-template-columns:150px minmax(0,1fr)}
+#projects [data-brand="venmo"] .cover-logos,#projects [data-brand="equinox"] .cover-logos{width:150px}
+#projects [data-brand="venmo"] .overlay-heading .cover-logos img,#projects [data-brand="equinox"] .overlay-heading .cover-logos img{width:150px;max-width:150px;height:48px;max-height:48px}

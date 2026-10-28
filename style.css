@@ -666,3 +666,9 @@ main h1{--text-size-step:0pt}
 #work .visual-experiences>.experience-card+.experience-card{padding-top:32px}
 #work .mango-videos{grid-template-columns:minmax(0,1fr)}
 }
+
+/* Fit the collapsed LinkedIn post without the unused iframe tail. */
+#work .mango-video{container-type:inline-size;align-self:start}
+#work .mango-video iframe{height:calc(56.25cqw + 246px)}
+#work .mango-video>a{margin:0;padding:6px 14px 8px}
+#work .artifact-link{display:block;font-size:calc(.75rem + var(--text-size-step,0pt));line-height:1.5;text-decoration:underline;text-underline-offset:3px;margin-top:0}
