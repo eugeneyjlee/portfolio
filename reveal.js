@@ -1,4 +1,4 @@
-// Fade and settle into the final size, never past it. The typewriter is independent.
+// Hero entrances stay independent from the quieter scroll reveals.
 (() => {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !Element.prototype.animate) return;
@@ -32,12 +32,22 @@
   if ('IntersectionObserver' in window) {
     observer = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting);
-      visible.forEach((entry, index) => {
+      visible.forEach((entry) => {
         observer.unobserve(entry.target);
-        popIn(entry.target, Math.min(index * 45, 180));
+        const element = entry.target;
+        if (motion.matches || element.contains(document.activeElement)) return;
+        // Fade in before the block enters view, with no resizing or stagger.
+        const animation = element.animate(
+          [{ opacity: 0 }, { opacity: getComputedStyle(element).opacity }],
+          { duration: 360, easing: 'ease-out', fill: 'backwards' }
+        );
+        animations.add(animation);
+        const clean = () => animations.delete(animation);
+        animation.onfinish = clean;
+        animation.oncancel = clean;
       });
-    }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .off-clock-toggle, .off-clock-item, .projects-intro, .experience-card, .project-row, .work > .doodle, .projects > .doodle, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+    document.querySelectorAll('.work > .section-heading, .projects > .section-heading, .social > .section-heading, .off-clock-toggle, .off-clock-item, .experience-card, .project-row, .footer-top, .footer-bottom, .site-footer > .doodle').forEach((element) => observer.observe(element));
   }
   motion.addEventListener('change', () => {
     if (!motion.matches) return;
