@@ -66,3 +66,6 @@
 @keyframes work-cue-pulse-mobile{0%,100%{transform:translateY(0);opacity:.72}50%{transform:translateY(6px);opacity:1}}
 @media(prefers-reduced-motion:reduce){.work-scroll-cue{animation:none;transform:translateY(-50%)}}
 @media(max-width:650px) and (prefers-reduced-motion:reduce){.work-scroll-cue{transform:none}}
+
+/* Keep campus metrics free of the generic details divider. */
+#social .metric-method{border-top:0}
