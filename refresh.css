@@ -1,0 +1,166 @@
+/* Audit pass, October 2026: hero positioning, evidence panels, readable
+   metadata, larger targets, click-to-load video, and narrow-screen fixes.
+   Loaded after style.css and project-files.css, so it wins on equal specificity. */
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- hero: original compact format, longer sentence ---------- */
+.intro-text.typewriter{animation-timing-function:steps(93,end)}
+@media(min-width:1101px){.intro .intro-text{font-size:calc(clamp(.875rem,1.2vw,1.2rem) + var(--text-size-step,0pt))}}
+
+/* ---------- nav: four links must fit at 320px ---------- */
+@media(max-width:420px){
+  .nav{flex-wrap:wrap;row-gap:8px}
+  .nav nav{margin-left:0;width:100%;display:flex}
+  .nav nav a{flex:1 1 auto;text-align:center;padding-inline:6px}
+}
+
+/* ---------- industry experience ---------- */
+.work-copy .role span,.work-copy .role>span{color:#5f5f5f}
+.metric-note{margin:10px 0 0;font-size:calc(.8125rem + var(--text-size-step,0pt));line-height:1.55;color:#5f5f5f}
+.work-copy h4.also-label{margin:18px 0 6px;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step,0pt));font-weight:500;letter-spacing:.02em;color:#555}
+.also-list{margin:0;padding-left:1.1em;font-size:calc(.9375rem + var(--text-size-step,0pt));line-height:1.65;color:#555}
+.also-list strong{font-weight:600;color:var(--ink)}
+.work-copy .summary+.summary{margin-top:10px}
+#work .artifact-link{font-size:calc(.8125rem + var(--text-size-step,0pt));padding-block:6px}
+
+/* Chime: the outcome, not today's live website */
+.chime-outcome{background:#f4f8f5;border-radius:12px;overflow:hidden}
+.outcome-board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;align-items:center;padding:32px}
+.outcome-stat{margin:0;display:flex;flex-direction:column;gap:8px}
+.outcome-number{font-size:calc(clamp(3rem,6vw,4.75rem) + var(--text-size-step,0pt));font-weight:500;line-height:1;letter-spacing:-.05em;color:#14532d}
+.outcome-label{max-width:22ch;font-size:calc(1rem + var(--text-size-step,0pt));line-height:1.45;color:#333}
+.outcome-flow{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:flow}
+.outcome-flow li{position:relative;display:flex;align-items:baseline;gap:12px;padding:12px 16px;background:#fff;border:1px solid #dbe7de;border-radius:10px;font-size:calc(.875rem + var(--text-size-step,0pt));line-height:1.4;color:#444}
+.outcome-flow li+li::before{content:"↓";position:absolute;top:-14px;left:22px;font-size:.75rem;color:#6c8a74}
+.outcome-flow strong{min-width:4.2em;font-size:calc(1.125rem + var(--text-size-step,0pt));font-weight:600;color:var(--ink)}
+.chime-outcome figcaption{padding:12px 32px 16px;background:transparent;border-top:1px solid #dbe7de;font-size:calc(.8125rem + var(--text-size-step,0pt));line-height:1.55;color:#555}
+.chime-outcome figcaption a{display:inline-flex;align-items:center;gap:4px;text-decoration:underline;text-underline-offset:3px;margin-left:4px}
+@media(max-width:700px){.outcome-board{grid-template-columns:1fr;padding:24px 20px;gap:22px}.chime-outcome figcaption{padding:12px 20px 16px}}
+
+/* MangoBoost fallback links: bigger targets */
+.mango-video>a,#work .mango-video>a{padding:10px 14px;font-size:calc(.8125rem + var(--text-size-step,0pt))}
+
+/* ---------- project files ---------- */
+#projects .projects-intro strong{font-weight:600;color:var(--ink)}
+/* Every tile shares one format: logo + date, media, one caption line, then text. */
+#projects .project-file{grid-row:span 6}
+@media(min-width:1101px){#projects .project-files-grid{grid-template-rows:repeat(2,68px auto minmax(32px,auto) auto auto 1fr)}}
+@media(max-width:1100px) and (min-width:651px){#projects .project-files-grid{grid-template-rows:repeat(3,68px auto minmax(32px,auto) auto auto 1fr)}}
+@media(max-width:650px){#projects .project-file{grid-row:auto}}
+#projects .project-media-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:32px;flex-wrap:wrap}
+#projects .project-caption{margin:0;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step,0pt));line-height:1.4;color:#555}
+#projects .project-media-tabs{display:flex;flex-wrap:wrap;gap:4px 14px}
+#projects .project-media-tabs button,#projects .project-media-tabs button[aria-selected]{min-height:28px;padding:2px 0;border:0;border-bottom:1.5px solid transparent;border-radius:0;background:transparent;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step,0pt));line-height:1.3;color:#555;white-space:nowrap}
+#projects .project-media-tabs button[aria-selected="true"]{border-bottom-color:#1d1d1d;color:#1d1d1d;background:transparent}
+#projects .project-media-tabs button:hover{color:#1d1d1d}
+#projects .prototype-try{display:inline-flex;width:auto;height:auto;min-height:28px;gap:4px;margin-left:auto;padding:2px 0;border:0;border-radius:0;background:transparent;font-family:var(--mono);font-size:calc(.75rem + var(--text-size-step,0pt));color:#1d1d1d;text-decoration:underline;text-underline-offset:3px}
+#projects .prototype-try:hover{background:transparent;color:var(--accent)}
+#projects .project-confidential{font-size:calc(.75rem + var(--text-size-step,0pt));letter-spacing:.02em;color:#555}
+#projects .overlay-topic{font-size:calc(.8125rem + var(--text-size-step,0pt));color:#555}
+#projects .project-role{font-size:calc(.8125rem + var(--text-size-step,0pt));color:#555}
+/* Stack logo above dates on narrow cards so wide wordmarks never collide with them. */
+@media(max-width:480px){
+  #projects .overlay-heading,#projects [data-brand="venmo"] .overlay-heading,#projects [data-brand="equinox"] .overlay-heading{grid-template-columns:minmax(0,1fr);gap:8px}
+  #projects .overlay-topic,#projects .project-meta{justify-self:start;justify-content:flex-start;text-align:left}
+  #projects .project-file{padding:24px 20px}
+}
+@media(max-width:650px){#projects .project-file{grid-template-rows:none}#projects .project-media-actions{min-height:0}}
+
+/* TikTok × Gemini: the team's process instead of Google's reference image */
+
+/* ---------- campus feed ---------- */
+.social-lede{margin:0 0 6px;font-size:calc(1.25rem + var(--text-size-step,0pt));font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.social-intro strong{font-weight:600;color:var(--ink)}
+.metric-method{max-width:760px;margin:8px 0 22px;font-size:calc(.875rem + var(--text-size-step,0pt));line-height:1.6;color:#555}
+.metric-method summary{display:inline-flex;align-items:center;min-height:40px;cursor:pointer;font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step,0pt));text-decoration:underline;text-underline-offset:3px;color:#444}
+.metric-method summary:focus-visible{outline:3px solid #6b74bb;outline-offset:3px}
+.metric-method ul{margin:6px 0 0;padding-left:1.1em}
+.metric-method li+li{margin-top:6px}
+.metric-method strong{color:var(--ink);font-weight:600}
+.views-updated,.social .carousel-topline>.views-updated,.carousel-more-sub{color:#5f5f5f}
+.video-tag{font-size:calc(.75rem + var(--text-size-step,0pt));color:#3f3f3f}
+.video-date,.social .video-slide .video-date{font-size:calc(.8125rem + var(--text-size-step,0pt));color:#5f5f5f}
+.video-source{display:inline-flex;align-items:center;gap:4px;min-height:36px;font-size:calc(.8125rem + var(--text-size-step,0pt));text-decoration:underline;text-underline-offset:3px;color:#333}
+.video-source:hover{color:var(--accent)}
+.reel-cover{position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;padding:0;border:0;background:#eee;cursor:pointer}
+.reel-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.reel-play{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#111c;color:#fff;transition:transform .2s ease,background .2s ease}
+.reel-cover:hover .reel-play{transform:scale(1.08);background:#111}
+.reel-cover:focus-visible{outline:3px solid #6b74bb;outline-offset:-3px}
+.reel-embed>iframe{opacity:1}
+@media(prefers-reduced-motion:reduce){.reel-play{transition:none}}
+
+/* ---------- off the clock / footer ---------- */
+.footer-invite{max-width:40ch;margin:0 0 14px;font-size:calc(1rem + var(--text-size-step,0pt));line-height:1.55;color:#444}
+.site-footer .footer-links a{min-height:32px;display:inline-flex;align-items:center}
+
+/* ---------- industry experience: one centered column, equal text and visual widths ---------- */
+/* Same edges as the about section: the full width of main. */
+#work{width:auto;max-width:none;margin-left:0;margin-right:0}
+@media(min-width:1001px){
+  #work .visual-experiences>.experience-card{grid-template-columns:340px minmax(0,1fr);gap:56px}
+  #work .visual-experiences>.experience-card>.work-copy{max-width:none}
+}
+#work .visual-experiences>.experience-card>.work-visual{width:100%;max-width:none;justify-self:stretch}
+#work .tiktok .paid-assets{max-width:none;width:100%}
+#work .mango-videos{width:100%}
+#work .mango-video{max-width:none}
+
+/* ---------- campus feed: full width, matching the project files ---------- */
+#social{width:calc(100vw - 160px);max-width:none;margin-left:calc(50% - 50vw + 80px)}
+@media(max-width:1100px){#social{width:calc(100vw - 80px);margin-left:calc(50% - 50vw + 40px)}}
+@media(max-width:650px){#social{width:calc(100vw - 48px);margin-left:calc(50% - 50vw + 24px)}}
+
+/* Chime: faint brand photo behind the outcome panel */
+.chime-outcome{position:relative;isolation:isolate}
+.chime-outcome::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#f4f8f5 30%,#f4f8f5d9 55%,#f4f8f599),url(./media/chime-app-bg.webp) right center/cover no-repeat;opacity:1}
+.chime-outcome::after{content:"";position:absolute;inset:0;z-index:-1;background:#f4f8f5;opacity:.55}
+.outcome-flow li{background:#ffffffe6}
+
+/* ---------- industry experience: one format for every company ---------- */
+.work-copy .also-list{margin:16px 0 0;padding-left:1.1em;display:grid;gap:8px;font-size:calc(.9375rem + var(--text-size-step,0pt));line-height:1.6;color:#555}
+.work-visual figcaption.work-caption{margin:10px 0 0;padding:0;background:transparent;border:0;font-size:calc(.8125rem + var(--text-size-step,0pt));line-height:1.55;color:#5f5f5f}
+.chime-outcome figcaption.work-caption{margin:0;padding:12px 32px 16px;border-top:1px solid #dbe7de}
+@media(max-width:700px){.chime-outcome figcaption.work-caption{padding:12px 20px 16px}}
+
+/* ---------- project files ---------- */
+#projects .projects-intro--one-line{max-width:none}
+/* TikTok × Gemini: three clean rows that fit the image slot at every width */
+#projects .process-board{display:flex;align-items:stretch}
+.process-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:6px;width:100%;height:100%}
+.process-steps li{display:grid;grid-template-columns:6.5em minmax(0,1fr);align-items:center;gap:12px;min-height:0;padding:0 14px;background:#fff;border:1px solid #cfe9e5;border-radius:10px}
+.process-step{font-family:var(--mono);font-size:calc(.6875rem + var(--text-size-step,0pt));color:#0f6f63;white-space:nowrap}
+.process-text{font-size:calc(.8125rem + var(--text-size-step,0pt));line-height:1.3;color:#444}
+.process-text strong{font-weight:600;color:var(--ink)}
+
+
+/* ---------- campus feed: headline numbers ---------- */
+.social-stats{display:flex;flex-wrap:wrap;gap:16px 56px;margin:24px 0 8px;padding:0}
+.social-stats>div{display:flex;flex-direction:column-reverse;gap:2px}
+.social-stats dt{font-family:var(--mono);font-size:calc(.8125rem + var(--text-size-step,0pt));color:#555}
+.social-stats dd{margin:0;font-size:calc(clamp(2.25rem,4vw,3.25rem) + var(--text-size-step,0pt));font-weight:500;line-height:1;letter-spacing:-.04em;color:var(--ink)}
+@media(max-width:650px){.social-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 22px}.social-stats dd{font-size:calc(1.75rem + var(--text-size-step,0pt))}}
+
+/* PayPal and Venmo: live Figma prototypes in the image slot */
+#projects .figma-embed,#projects .canva-embed{display:block;width:100%;height:100%;border:0;border-radius:8px;background:#fff}
+#projects .proto-link{display:inline-flex;align-items:center;gap:3px;min-height:28px;color:#1d1d1d;text-decoration:underline;text-underline-offset:3px}
+#projects .proto-link:hover{color:var(--accent)}
+/* Metric-method toggle: plain text, no circle */
+.metric-method summary{gap:6px;padding-top:0}
+.metric-method summary::after{content:'+';width:auto;height:auto;border-radius:0;background:transparent;font-family:var(--mono);color:#444}
+.metric-method[open] summary::after{content:'−'}
+
+/* Venmo + Equinox: tightly cropped logos, shown whole */
+#projects .overlay-heading .cover-logos .project-wordmark{object-fit:contain;object-position:left center}
+
+/* ---------- industry experience: narrower section, smaller visuals ---------- */
+@media(min-width:1001px){
+  #work{width:min(1040px,100%);margin-inline:auto}
+  #work .visual-experiences>.experience-card{grid-template-columns:300px minmax(0,1fr);gap:48px}
+}
+#work .paid-assets{gap:14px}
+#work .mango-videos{gap:14px}
+
+/* "+27 more videos" card: plain black text link, no pill */
+.carousel-more-cta{margin-top:18px;padding:0;border-radius:0;background:transparent;color:var(--ink);text-decoration:underline;text-underline-offset:4px}

@@ -1,74 +1,50 @@
-// Every reel is an Instagram embed — no cover images in the way. The whole
-// track mounts at once, well before the section is reached, so scrolling
-// sideways never swaps a placeholder for a player.
+// Each reel starts as a lightweight cover (a ~40KB WebP) with a play button.
+// The Instagram player only loads when someone asks for it, so the section no
+// longer mounts six cross-origin iframes as it scrolls into view.
 //
-// Instagram's embed cannot be told to play: the iframe is cross-origin and its
-// only postMessage traffic is sizing, so each reel opens paused behind its own
-// play button.
-//
-// The cover images live inside <noscript>, so a browser running this script
-// never fetches them — they are ~2MB each. If an embed stalls, the cover for
-// that one slide is built from its data attributes and fetched then.
+// Every slide also keeps a permanent "Open on Instagram" link beneath it: an
+// iframe's load event does not prove the media is playable, so the original
+// post must always be one click away.
 (() => {
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.reel-embed[data-reel]');
-  if (!track || !slides.length) return;
-  track.classList.add('js-embeds');
+  const hosts = document.querySelectorAll('.reel-embed[data-reel]');
+  if (!hosts.length) return;
 
-  const buildCover = (host) => {
-    const link = document.createElement('a');
-    link.className = 'reel-embed-fallback';
-    link.href = 'https://www.instagram.com/reel/' + host.dataset.reel + '/';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    const image = document.createElement('img');
-    image.src = host.dataset.cover;
-    image.alt = host.dataset.alt || '';
-    const label = document.createElement('span');
-    label.className = 'reel-watch-label';
-    label.textContent = 'Watch on Instagram';
-    link.append(image, label);
-    return link;
-  };
+  const titleOf = (host) => (host.dataset.alt || '').replace(/ — video thumbnail$/, '');
 
   const mount = (host) => {
     if (host.dataset.mounted) return;
     host.dataset.mounted = '1';
     const frame = document.createElement('iframe');
     frame.src = 'https://www.instagram.com/reel/' + host.dataset.reel + '/embed/';
-    frame.title = 'Instagram reel';
+    frame.title = 'Instagram reel: ' + titleOf(host);
     frame.setAttribute('scrolling', 'no');
     frame.setAttribute('allowtransparency', 'true');
     frame.setAttribute('allow', 'encrypted-media; picture-in-picture; fullscreen');
     frame.setAttribute('allowfullscreen', '');
-    // If Instagram never answers, fall back to the cover image and its link
-    // rather than leaving an empty box.
-    const failed = setTimeout(() => {
-      if (host.classList.contains('is-loaded')) return;
-      host.classList.add('is-stalled');
-      host.appendChild(buildCover(host));
-    }, 10000);
-    frame.addEventListener('load', () => {
-      clearTimeout(failed);
-      host.classList.add('is-loaded');
-    });
+    frame.addEventListener('load', () => host.classList.add('is-loaded'));
     host.appendChild(frame);
+    frame.focus();
   };
 
-  const mountAll = () => slides.forEach(mount);
-
-  if (!('IntersectionObserver' in window)) {
-    mountAll();
-    return;
-  }
-  // Start loading once the section is within a couple of screens, so the
-  // players are ready on arrival. On a desktop viewport the carousel is inside
-  // that margin from the start, so they mount immediately; on a phone, where
-  // the section sits much further down, they wait until it is approached.
-  const observer = new IntersectionObserver((entries) => {
-    if (!entries.some((entry) => entry.isIntersecting)) return;
-    observer.disconnect();
-    mountAll();
-  }, { root: null, rootMargin: '2500px 0px', threshold: 0 });
-  observer.observe(track);
+  hosts.forEach((host) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'reel-cover';
+    button.setAttribute('aria-label', 'Play ' + titleOf(host));
+    const image = document.createElement('img');
+    image.src = host.dataset.cover;
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    const play = document.createElement('span');
+    play.className = 'reel-play';
+    play.setAttribute('aria-hidden', 'true');
+    play.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+    button.append(image, play);
+    button.addEventListener('click', () => {
+      button.remove();
+      mount(host);
+    });
+    host.appendChild(button);
+  });
 })();
