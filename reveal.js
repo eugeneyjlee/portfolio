@@ -22,7 +22,7 @@
     ['.intro-alias', 95],
     ['.intro-actions a', 110],
     ['.intro-facts li', 150],
-    ['.landing-photo', 190],
+    ['.landing-photo, .work-scroll-cue', 190],
     ['.intro-side a', 210],
     ['.intro .doodle', 160]
   ];

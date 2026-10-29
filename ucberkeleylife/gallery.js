@@ -1,27 +1,5 @@
-// Cards are plain links to the original posts, so everything works without
-// JavaScript. With it, a click swaps the poster for the platform's player in
-// place, and the topic chips filter the grid.
+// Accessible filtering and sorting; the shared viewer handles previews.
 (() => {
-  document.querySelectorAll('.video-poster[data-embed]').forEach((poster) => {
-    poster.addEventListener('click', (event) => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
-      event.preventDefault();
-      const card = poster.closest('.video-card');
-      const title = card.querySelector('.video-card-title').textContent;
-      const frame = document.createElement('iframe');
-      frame.src = poster.dataset.embed;
-      frame.title = poster.dataset.platform + ' video: ' + title;
-      frame.setAttribute('allow', 'encrypted-media; picture-in-picture; fullscreen; autoplay');
-      frame.setAttribute('allowfullscreen', '');
-      frame.setAttribute('scrolling', 'no');
-      const player = document.createElement('div');
-      player.className = 'video-player is-' + poster.dataset.platform.toLowerCase();
-      player.appendChild(frame);
-      poster.replaceWith(player);
-      frame.focus();
-    });
-  });
-
   const grid = document.querySelector('.video-grid');
   const sort = document.getElementById('video-sort');
   const order = {
