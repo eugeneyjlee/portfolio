@@ -1,0 +1,55 @@
+/* Shared heading column; each section's media can extend beyond it. */
+:root{--section-copy-width:1040px;--section-content-width:1720px}
+#work,#visual-work{width:min(var(--section-content-width),calc(100vw - 120px));max-width:none;margin-inline:auto}
+.section-copy{width:min(var(--section-copy-width),100%);margin-inline:auto;min-width:0}
+#work .section-copy>.section-heading,#projects .section-copy>.section-heading,#social .section-copy>.section-heading,#visual-work .section-copy>.art-heading{padding:0;margin:0 0 20px;align-items:flex-end}
+#work-title,#projects-title,#social-title,#artwork-title{font-family:'DM Sans',Arial,sans-serif;font-weight:500;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.2;letter-spacing:-.045em}
+.section-copy .project-kicker{font-family:var(--mono);font-size:.75rem;font-weight:400;line-height:1.5;letter-spacing:0;color:#666;margin:0 0 10px}
+#projects .section-copy>.projects-intro,#social .section-copy>.projects-intro{max-width:760px;margin:0 0 24px;font-size:1rem;line-height:1.65;color:#555}
+#work .visual-experiences{width:min(1040px,100%);margin-inline:auto}
+#social .section-copy>.social-stats{margin-left:0;margin-right:0}
+#social .section-copy>.metric-method{margin-left:0;margin-right:0}
+#social .carousel-topline{width:min(var(--section-copy-width),100%);margin-inline:auto}
+#visual-work .section-copy{margin-bottom:32px}
+#visual-work .section-copy>.art-heading{margin-bottom:0}
+#visual-work .art-frame{height:460px}
+@media(max-width:1200px) and (min-width:951px){#visual-work .art-frame{height:390px}}
+@media(max-width:1100px){#work,#visual-work{width:calc(100vw - 80px)}}
+@media(max-width:950px){#visual-work .art-frame{height:420px}}
+@media(max-width:650px){
+ #work,#projects,#social,#visual-work{width:100%;max-width:100%;margin-inline:auto}
+ #work-title,#projects-title,#social-title,#artwork-title{font-size:1.9rem}
+ #social .section-copy>.section-heading{flex-wrap:wrap;align-items:flex-start;gap:12px}
+ .section-copy .project-kicker{font-size:.68rem;line-height:1.6}
+ #projects .section-copy>.projects-intro,#social .section-copy>.projects-intro{font-size:.9375rem}
+ #visual-work .art-frame{height:380px}
+}
+
+/* Larger artwork inside unchanged frames; one shared media height per column. */
+#visual-work .art-frame{container-type:inline-size}
+#visual-work .art-frame img,#visual-work .art-frame video{height:min(280px,55cqw)}
+#visual-work .art-piece figcaption{font-size:.85rem}
+
+/* Show about three campus videos, with the next one peeking into view. */
+#social .video-carousel{width:min(1120px,100%);margin-inline:auto}
+
+/* Keep the three-column project layout within a calmer desktop width. */
+@media(min-width:1101px){#projects{width:min(1760px,calc(100vw - 160px));margin-inline:auto}}
+
+/* One content width for projects, campus videos, and visual work. */
+#projects,#social,#visual-work{width:min(1760px,calc(100vw - 160px));max-width:none;margin-inline:auto}
+#social .video-carousel{width:100%}
+@media(max-width:1100px){#projects,#social,#visual-work{width:calc(100vw - 80px)}}
+@media(max-width:650px){
+ #projects,#social,#visual-work{width:100%;max-width:100%;margin-inline:auto}
+ #social .carousel-track{--cover-width:min(326px,84vw)}
+}
+
+/* Short context sits opposite the title within the shared heading column. */
+#projects .section-copy,#visual-work .section-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;align-items:end;margin-bottom:32px}
+#projects .section-copy>.section-heading,#visual-work .section-copy>.art-heading{margin-bottom:0}
+#projects .section-copy>.projects-intro,#visual-work .section-copy>.art-intro{max-width:none;margin:0;text-align:right;font-family:'DM Sans',Arial,sans-serif;font-size:.9375rem;line-height:1.65;color:#62625d}
+@media(max-width:780px){
+ #projects .section-copy,#visual-work .section-copy{grid-template-columns:1fr;row-gap:16px;margin-bottom:28px}
+ #projects .section-copy>.projects-intro,#visual-work .section-copy>.art-intro{max-width:520px;justify-self:end;font-size:.875rem}
+}
