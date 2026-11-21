@@ -56,3 +56,5 @@
 .archive-sort select{min-height:36px;padding:4px 20px 4px 0;border:0;border-radius:0;border-bottom:1.5px solid #1d1d1d;background-position:right 0 center;background-size:12px}
 .archive-sort select:hover{border-color:#1d1d1d}
 .video-card .video-tag{padding:0;border-radius:0;background:transparent;color:#666}
+
+.video-card-credit{margin:6px 0 8px;font-size:calc(.8125rem + var(--text-size-step,0pt));line-height:1.5;color:#42566a}
