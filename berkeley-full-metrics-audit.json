@@ -1,362 +1,846 @@
 {
-  "checked": "2026-10-29",
-  "tiktok": [
+  "checked_at": "2026-11-21T01:41:50.115665+00:00",
+  "method": "Local Google Chrome UI via CUA: Instagram and TikTok profile grids for views; individual TikTok pages and Instagram embedded post views for engagement; Instagram reel detail for remaining comment counts. Rounded profile counts are expanded approximately. Each cross-post is counted once per platform.",
+  "estimation": {
+    "authorized_by_user": true,
+    "hidden_instagram_likes": "Median observed Instagram likes/views rate in the same gallery category when at least three examples exist; otherwise overall Instagram median.",
+    "instagram_overall_median_like_rate": 0.01504059040590406,
+    "hidden_instagram_shares_and_saves": "Instagram like count multiplied by median shares/likes and saves/likes from the 16 reviewed TikToks. Cross-platform proxy is an assumption, not an Instagram-reported count.",
+    "median_shares_per_like": 0.04273179143842565,
+    "median_saves_per_like": 0.059742306266221734,
+    "observed_values_are_never_overwritten": true
+  },
+  "totals": {
+    "posts": 41,
+    "distinct_videos": 27,
+    "views_approximate": 1706990,
+    "observed_engagements": 30886,
+    "estimated_hidden_engagements": 4945,
+    "engagements_including_estimates": 35831,
+    "headline_views": "1.71M",
+    "headline_estimated_engagements": "~36K"
+  },
+  "posts": [
     {
-      "id": "7689549849712135454",
-      "views": 12000,
-      "likes": 424,
-      "comments": 19,
-      "saves": 47,
-      "shares": 88
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/Df7yg8oPu4H/",
+      "views": 201000,
+      "views_displayed": "201K",
+      "observed": {
+        "likes": 3337,
+        "comments": 44,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 143,
+        "saves": 199
+      },
+      "category": "voices",
+      "title": "Big Game: Berkeley × Stanford",
+      "observed_engagements": 3381,
+      "estimated_engagements": 342,
+      "engagements_including_estimates": 3723
     },
     {
-      "id": "7680604140946459934",
-      "views": 3515,
-      "likes": 115,
-      "comments": 10,
-      "saves": 7,
-      "shares": 3
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/Df5UfFPPR8p/",
+      "views": 25600,
+      "views_displayed": "25.6K",
+      "observed": {
+        "likes": null,
+        "comments": 10,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "likes": 508,
+        "shares": 22,
+        "saves": 30
+      },
+      "category": "campus",
+      "title": "Trying to Be Cal Cheerleaders for a Day",
+      "like_estimate_rate": 0.019829782503498518,
+      "observed_engagements": 10,
+      "estimated_engagements": 560,
+      "engagements_including_estimates": 570
     },
     {
-      "id": "7678507774929571103",
-      "views": 30600,
-      "likes": 1515,
-      "comments": 29,
-      "saves": 65,
-      "shares": 159
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/Df0Kgoxv9WZ/",
+      "views": 28600,
+      "views_displayed": "28.6K",
+      "observed": {
+        "likes": null,
+        "comments": 11,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "likes": 560,
+        "shares": 24,
+        "saves": 33
+      },
+      "category": "food",
+      "title": "Your Favorite Study Spot at UC Berkeley",
+      "like_estimate_rate": 0.019570957095709572,
+      "observed_engagements": 11,
+      "estimated_engagements": 617,
+      "engagements_including_estimates": 628
     },
     {
-      "id": "7669884477379808543",
-      "views": 9345,
-      "likes": 461,
-      "comments": 8,
-      "saves": 119,
-      "shares": 50
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DduJhBzzXH5/",
+      "views": 66400,
+      "views_displayed": "66.4K",
+      "observed": {
+        "likes": 716,
+        "comments": 12,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 31,
+        "saves": 43
+      },
+      "category": "food",
+      "title": "New Panini Spot at UC Berkeley",
+      "observed_engagements": 728,
+      "estimated_engagements": 74,
+      "engagements_including_estimates": 802
     },
     {
-      "id": "7606425867803200781",
-      "views": 6506,
-      "likes": 186,
-      "comments": 5,
-      "saves": 11,
-      "shares": 8
-    },
-    {
-      "id": "7577125289856159007",
-      "views": 6901,
-      "likes": 184,
-      "comments": 6,
-      "saves": 6,
-      "shares": 7
-    },
-    {
-      "id": "7558925702599380254",
-      "views": 18400,
-      "likes": 112,
-      "comments": 6,
-      "saves": 11,
-      "shares": 12
-    },
-    {
-      "id": "7488047995951369514",
-      "views": 5887,
-      "likes": 213,
-      "comments": 8,
-      "saves": 18,
-      "shares": 13
-    },
-    {
-      "id": "7478404203367583022",
-      "views": 6930,
-      "likes": 140,
-      "comments": 3,
-      "saves": 12,
-      "shares": 16
-    },
-    {
-      "id": "7473216070401248555",
-      "views": 11600,
-      "likes": 481,
-      "comments": 12,
-      "saves": 17,
-      "shares": 39
-    },
-    {
-      "id": "7468722010147818795",
-      "views": 7358,
-      "likes": 262,
-      "comments": 4,
-      "saves": 17,
-      "shares": 11
-    },
-    {
-      "id": "7388190126305824042",
-      "views": 8115,
-      "likes": 424,
-      "comments": 4,
-      "saves": 23,
-      "shares": 18
-    },
-    {
-      "id": "7367590877344238894",
-      "views": 5113,
-      "likes": 173,
-      "comments": 4,
-      "saves": 10,
-      "shares": 2
-    }
-  ],
-  "instagram": [
-    {
-      "id": "DduJhBzzXH5",
-      "views": 65300,
-      "comments": 17,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 1175
-    },
-    {
-      "id": "Dcubskth0kQ",
-      "views": 33000,
-      "comments": 10,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 594
-    },
-    {
-      "id": "DchXm56PNRD",
-      "views": 270000,
-      "comments": 61,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 4860
-    },
-    {
-      "id": "DblslzRPy1R",
-      "views": 49000,
-      "comments": 9,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 882
-    },
-    {
-      "id": "DU1NgvngTAq",
-      "views": 85700,
-      "comments": 12,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 1543
-    },
-    {
-      "id": "DRiEGGeD7k5",
-      "views": 120000,
-      "comments": 32,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 2160
-    },
-    {
-      "id": "DPjxEpWkrYg",
-      "views": 32700,
-      "comments": 9,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 589
-    },
-    {
-      "id": "DKsONg-voXn",
-      "views": 44300,
-      "comments": 1,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 797
-    },
-    {
-      "id": "DI4R0kUzGA1",
-      "views": 31500,
-      "comments": 222,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 567
-    },
-    {
-      "id": "DH32-wOvyjE",
-      "views": 126000,
-      "comments": 30,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 2268
-    },
-    {
-      "id": "DG1BszcyHA1",
-      "views": 27900,
-      "comments": 12,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 502
-    },
-    {
-      "id": "DGQ_-0gymOB",
-      "views": 46200,
-      "comments": 11,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 832
-    },
-    {
-      "id": "DFyMPOMzfL2",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/Dcubskth0kQ/",
       "views": 33100,
-      "comments": null,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "not exposed in current view",
-      "estimated_engagements": 596
+      "views_displayed": "33.1K",
+      "observed": {
+        "likes": null,
+        "comments": 8,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "likes": 656,
+        "shares": 28,
+        "saves": 39
+      },
+      "category": "campus",
+      "title": "My Last First Week at UC Berkeley",
+      "like_estimate_rate": 0.019829782503498518,
+      "observed_engagements": 8,
+      "estimated_engagements": 723,
+      "engagements_including_estimates": 731
     },
     {
-      "id": "DDu8587zatR",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DchXm56PNRD/",
+      "views": 271000,
+      "views_displayed": "271K",
+      "observed": {
+        "likes": 4076,
+        "comments": 61,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 174,
+        "saves": 244
+      },
+      "category": "voices",
+      "title": "What UC Berkeley Students Wore (First Day of School)",
+      "observed_engagements": 4137,
+      "estimated_engagements": 418,
+      "engagements_including_estimates": 4555
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DblslzRPy1R/",
+      "views": 49100,
+      "views_displayed": "49.1K",
+      "observed": {
+        "likes": 724,
+        "comments": 6,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 31,
+        "saves": 43
+      },
+      "category": "advice",
+      "title": "Are These Items Worth It?",
+      "observed_engagements": 730,
+      "estimated_engagements": 74,
+      "engagements_including_estimates": 804
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DU1NgvngTAq/",
+      "views": 85700,
+      "views_displayed": "85.7K",
+      "observed": {
+        "likes": 1248,
+        "comments": 12,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 53,
+        "saves": 75
+      },
+      "category": "voices",
+      "title": "This or That UC Berkeley Picks",
+      "observed_engagements": 1260,
+      "estimated_engagements": 128,
+      "engagements_including_estimates": 1388
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DRiEGGeD7k5/",
+      "views": 120000,
+      "views_displayed": "120K",
+      "observed": {
+        "likes": 1575,
+        "comments": 32,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 67,
+        "saves": 94
+      },
+      "category": "voices",
+      "title": "Thankful Moments at UC Berkeley",
+      "observed_engagements": 1607,
+      "estimated_engagements": 161,
+      "engagements_including_estimates": 1768
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DPjxEpWkrYg/",
+      "views": 32800,
+      "views_displayed": "32.8K",
+      "observed": {
+        "likes": null,
+        "comments": 8,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "likes": 642,
+        "shares": 27,
+        "saves": 38
+      },
+      "category": "food",
+      "title": "3 Telegraph Eats That Ate. Literally.",
+      "like_estimate_rate": 0.019570957095709572,
+      "observed_engagements": 8,
+      "estimated_engagements": 707,
+      "engagements_including_estimates": 715
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DKsONg-voXn/",
+      "views": 44300,
+      "views_displayed": "44.3K",
+      "observed": {
+        "likes": 556,
+        "comments": 1,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 24,
+        "saves": 33
+      },
+      "category": "campus",
+      "title": "What’s Inside the Campanile?",
+      "observed_engagements": 557,
+      "estimated_engagements": 57,
+      "engagements_including_estimates": 614
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DI4R0kUzGA1/",
+      "views": 31500,
+      "views_displayed": "31.5K",
+      "observed": {
+        "likes": 702,
+        "comments": 222,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 30,
+        "saves": 42
+      },
+      "category": "food",
+      "title": "Telegraph Boba Day 2025",
+      "observed_engagements": 924,
+      "estimated_engagements": 72,
+      "engagements_including_estimates": 996
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DH32-wOvyjE/",
+      "views": 126000,
+      "views_displayed": "126K",
+      "observed": {
+        "likes": 1820,
+        "comments": 30,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 78,
+        "saves": 109
+      },
+      "category": "voices",
+      "title": "Why We Chose UC Berkeley & What We Love About It",
+      "observed_engagements": 1850,
+      "estimated_engagements": 187,
+      "engagements_including_estimates": 2037
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DG1BszcyHA1/",
+      "views": 27900,
+      "views_displayed": "27.9K",
+      "observed": {
+        "likes": 337,
+        "comments": 10,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 14,
+        "saves": 20
+      },
+      "category": "food",
+      "title": "Come With Us to Local x Design",
+      "observed_engagements": 347,
+      "estimated_engagements": 34,
+      "engagements_including_estimates": 381
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DGQ_-0gymOB/",
+      "views": 46200,
+      "views_displayed": "46.2K",
+      "observed": {
+        "likes": 932,
+        "comments": 10,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 40,
+        "saves": 56
+      },
+      "category": "campus",
+      "title": "Walking Through The UC Berkeley Campus",
+      "observed_engagements": 942,
+      "estimated_engagements": 96,
+      "engagements_including_estimates": 1038
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DFyMPOMzfL2/",
+      "views": 33100,
+      "views_displayed": "33.1K",
+      "observed": {
+        "likes": 645,
+        "comments": 5,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 28,
+        "saves": 39
+      },
+      "category": "campus",
+      "title": "Day in the Life as a UC Berkeley Sophomore",
+      "observed_engagements": 650,
+      "estimated_engagements": 67,
+      "engagements_including_estimates": 717
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DDu8587zatR/",
       "views": 50200,
-      "comments": 7,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 904
+      "views_displayed": "50.2K",
+      "observed": {
+        "likes": 817,
+        "comments": 7,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 35,
+        "saves": 49
+      },
+      "category": "voices",
+      "title": "How did UC Berkeley students choose their major?",
+      "observed_engagements": 824,
+      "estimated_engagements": 84,
+      "engagements_including_estimates": 908
     },
     {
-      "id": "DB9mC52Sv60",
-      "views": 26900,
-      "comments": 19,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 484
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DB9mC52Sv60/",
+      "views": 27000,
+      "views_displayed": "27K",
+      "observed": {
+        "likes": 706,
+        "comments": 19,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 30,
+        "saves": 42
+      },
+      "category": "campus",
+      "title": "Trying to Be In The Cal Band for a Day",
+      "observed_engagements": 725,
+      "estimated_engagements": 72,
+      "engagements_including_estimates": 797
     },
     {
-      "id": "DBelgERSdLd",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DBelgERSdLd/",
       "views": 42600,
-      "comments": 13,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 767
+      "views_displayed": "42.6K",
+      "observed": {
+        "likes": 639,
+        "comments": 11,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 27,
+        "saves": 38
+      },
+      "category": "voices",
+      "title": "What did you bring to Berkeley?",
+      "observed_engagements": 650,
+      "estimated_engagements": 65,
+      "engagements_including_estimates": 715
     },
     {
-      "id": "DBMicDkyTT1",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/DBMicDkyTT1/",
       "views": 36000,
-      "comments": 8,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 648
+      "views_displayed": "36K",
+      "observed": {
+        "likes": 863,
+        "comments": 7,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 37,
+        "saves": 52
+      },
+      "category": "advice",
+      "title": "UC Berkeley Study Tips",
+      "observed_engagements": 870,
+      "estimated_engagements": 89,
+      "engagements_including_estimates": 959
     },
     {
-      "id": "C-ddu54hoEy",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/C-ddu54hoEy/",
       "views": 49200,
-      "comments": null,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "not exposed in current view",
-      "estimated_engagements": 886
+      "views_displayed": "49.2K",
+      "observed": {
+        "likes": 735,
+        "comments": 5,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 31,
+        "saves": 44
+      },
+      "category": "advice",
+      "title": "First Year Fundamentals: Packing Smart",
+      "observed_engagements": 740,
+      "estimated_engagements": 75,
+      "engagements_including_estimates": 815
     },
     {
-      "id": "C95V77eySKy",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/C95V77eySKy/",
       "views": 27300,
-      "comments": 2,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 491
+      "views_displayed": "27.3K",
+      "observed": {
+        "likes": 407,
+        "comments": 2,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 17,
+        "saves": 24
+      },
+      "category": "advice",
+      "title": "First Year Fundamentals: Maximizing Campus Resources",
+      "observed_engagements": 409,
+      "estimated_engagements": 41,
+      "engagements_including_estimates": 450
     },
     {
-      "id": "C85Asy-SLvM",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/C85Asy-SLvM/",
       "views": 31700,
-      "comments": 6,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 571
+      "views_displayed": "31.7K",
+      "observed": {
+        "likes": 634,
+        "comments": 6,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 27,
+        "saves": 38
+      },
+      "category": "advice",
+      "title": "UC Berkeley Enrollment Tips!",
+      "observed_engagements": 640,
+      "estimated_engagements": 65,
+      "engagements_including_estimates": 705
     },
     {
-      "id": "C8aDx1av3hV",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/C8aDx1av3hV/",
       "views": 31700,
-      "comments": 21,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 571
+      "views_displayed": "31.7K",
+      "observed": {
+        "likes": 750,
+        "comments": 21,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 32,
+        "saves": 45
+      },
+      "category": "food",
+      "title": "Best Matcha Places Around Berkeley",
+      "observed_engagements": 771,
+      "estimated_engagements": 77,
+      "engagements_including_estimates": 848
     },
     {
-      "id": "C6J4xuAJx4B",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/reel/C6J4xuAJx4B/",
       "views": 30300,
-      "comments": 5,
-      "likes": null,
-      "shares": null,
-      "saves": null,
-      "likes_status": "hidden in current viewing settings",
-      "comments_status": "visible",
-      "estimated_engagements": 545
+      "views_displayed": "30.3K",
+      "observed": {
+        "likes": 593,
+        "comments": 5,
+        "shares": null,
+        "saves": null
+      },
+      "estimated": {
+        "shares": 25,
+        "saves": 35
+      },
+      "category": "food",
+      "title": "Telegraph Boba Day",
+      "observed_engagements": 598,
+      "estimated_engagements": 60,
+      "engagements_including_estimates": 658
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@stanford/video/7709971167188241694",
+      "views": 20600,
+      "views_displayed": "20.6K",
+      "observed": {
+        "likes": 1568,
+        "comments": 8,
+        "saves": 71,
+        "shares": 34
+      },
+      "estimated": {},
+      "category": "voices",
+      "title": "Big Game: Berkeley × Stanford",
+      "observed_engagements": 1681,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 1681
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7709604390948146445",
+      "views": 1005,
+      "views_displayed": "1005",
+      "observed": {
+        "likes": 73,
+        "comments": 4,
+        "saves": 2,
+        "shares": 1
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "Trying to Be Cal Cheerleaders for a Day",
+      "observed_engagements": 80,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 80
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7708860872873102622",
+      "views": 1364,
+      "views_displayed": "1364",
+      "observed": {
+        "likes": 76,
+        "comments": 2,
+        "saves": 6,
+        "shares": 3
+      },
+      "estimated": {},
+      "category": "food",
+      "title": "Your Favorite Study Spot at UC Berkeley",
+      "observed_engagements": 87,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 87
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7689549849712135454",
+      "views": 12600,
+      "views_displayed": "12.6K",
+      "observed": {
+        "likes": 456,
+        "comments": 19,
+        "saves": 50,
+        "shares": 100
+      },
+      "estimated": {},
+      "category": "food",
+      "title": "New Panini Spot at UC Berkeley",
+      "observed_engagements": 625,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 625
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7680604140946459934",
+      "views": 3587,
+      "views_displayed": "3587",
+      "observed": {
+        "likes": 116,
+        "comments": 10,
+        "saves": 7,
+        "shares": 3
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "My Last First Week at UC Berkeley",
+      "observed_engagements": 136,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 136
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7678507774929571103",
+      "views": 31000,
+      "views_displayed": "31K",
+      "observed": {
+        "likes": 1530,
+        "comments": 29,
+        "saves": 65,
+        "shares": 159
+      },
+      "estimated": {},
+      "category": "voices",
+      "title": "What UC Berkeley Students Wore (First Day of School)",
+      "observed_engagements": 1783,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 1783
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7669884477379808543",
+      "views": 9373,
+      "views_displayed": "9373",
+      "observed": {
+        "likes": 461,
+        "comments": 8,
+        "saves": 118,
+        "shares": 50
+      },
+      "estimated": {},
+      "category": "advice",
+      "title": "Are These Items Worth It?",
+      "observed_engagements": 637,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 637
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7606425867803200781",
+      "views": 6510,
+      "views_displayed": "6510",
+      "observed": {
+        "likes": 186,
+        "comments": 5,
+        "saves": 11,
+        "shares": 8
+      },
+      "estimated": {},
+      "category": "voices",
+      "title": "This or That UC Berkeley Picks",
+      "observed_engagements": 210,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 210
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7577125289856159007",
+      "views": 6905,
+      "views_displayed": "6905",
+      "observed": {
+        "likes": 184,
+        "comments": 6,
+        "saves": 6,
+        "shares": 7
+      },
+      "estimated": {},
+      "category": "voices",
+      "title": "Thankful Moments at UC Berkeley",
+      "observed_engagements": 203,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 203
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7558925702599380254",
+      "views": 18400,
+      "views_displayed": "18.4K",
+      "observed": {
+        "likes": 112,
+        "comments": 6,
+        "saves": 11,
+        "shares": 12
+      },
+      "estimated": {},
+      "category": "food",
+      "title": "3 Telegraph Eats That Ate. Literally.",
+      "observed_engagements": 141,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 141
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7488047995951369514",
+      "views": 5890,
+      "views_displayed": "5890",
+      "observed": {
+        "likes": 213,
+        "comments": 8,
+        "saves": 18,
+        "shares": 13
+      },
+      "estimated": {},
+      "category": "voices",
+      "title": "Why We Chose UC Berkeley & What We Love About It",
+      "observed_engagements": 252,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 252
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7478404203367583022",
+      "views": 9263,
+      "views_displayed": "9263",
+      "observed": {
+        "likes": 142,
+        "comments": 3,
+        "saves": 12,
+        "shares": 16
+      },
+      "estimated": {},
+      "category": "food",
+      "title": "Come With Us to Local x Design",
+      "observed_engagements": 173,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 173
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7473216070401248555",
+      "views": 11600,
+      "views_displayed": "11.6K",
+      "observed": {
+        "likes": 481,
+        "comments": 12,
+        "saves": 17,
+        "shares": 39
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "Walking Through The UC Berkeley Campus",
+      "observed_engagements": 549,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 549
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7468722010147818795",
+      "views": 7361,
+      "views_displayed": "7361",
+      "observed": {
+        "likes": 262,
+        "comments": 4,
+        "saves": 17,
+        "shares": 11
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "Day in the Life as a UC Berkeley Sophomore",
+      "observed_engagements": 294,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 294
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7388190126305824042",
+      "views": 8118,
+      "views_displayed": "8118",
+      "observed": {
+        "likes": 424,
+        "comments": 4,
+        "saves": 23,
+        "shares": 18
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "A Stress Break at the UC Botanical Garden",
+      "observed_engagements": 469,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 469
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@ucberkeley/video/7367590877344238894",
+      "views": 5114,
+      "views_displayed": "5114",
+      "observed": {
+        "likes": 173,
+        "comments": 4,
+        "saves": 10,
+        "shares": 2
+      },
+      "estimated": {},
+      "category": "campus",
+      "title": "We Are Blue and Gold",
+      "observed_engagements": 189,
+      "estimated_engagements": 0,
+      "engagements_including_estimates": 189
     }
-  ],
-  "views_total": 1422870,
-  "views_note": "Sum of public profile counters, including rounded K labels; not unique viewers.",
-  "engagement_estimate": {
-    "observed_tiktok": 5597,
-    "instagram_rate": 0.018,
-    "instagram_estimated": 23231,
-    "total": 28828,
-    "method": "Apply an approximate 1.8% historical portfolio engagement rate to refreshed Instagram views. Add observed TikTok likes, comments, shares and saves. Instagram comments are included in the modeled total, not added twice. Two Instagram comment totals were unavailable; all Instagram likes/shares/saves were unavailable in current viewing settings. The result is modeled, not platform analytics."
-  }
+  ]
 }

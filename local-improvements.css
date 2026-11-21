@@ -69,3 +69,15 @@
 
 /* Keep campus metrics free of the generic details divider. */
 #social .metric-method{border-top:0}
+
+/* Campus feed uses the same compact cards as the full video gallery. */
+.social .video-poster{position:relative;display:block;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#eee}
+.social .video-poster>img{display:block;width:100%;height:100%;object-fit:cover}
+.social .poster-play{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:56px;height:56px;transform:translate(-50%,-50%);border-radius:50%;background:#111c;color:#fff}
+.social .poster-date{position:absolute;left:10px;top:10px;padding:4px 10px;border-radius:100px;background:#fffffff0;color:#222;font-family:var(--mono);font-size:.75rem;font-style:normal;white-space:nowrap}
+.social .video-card-credit{margin:6px 0 8px;font-size:.8125rem;line-height:1.5;color:#555}
+.social .video-card-meta{margin:4px 0 0;color:#5f5f5f;font-size:.8125rem}
+.social .video-card-links{display:flex;gap:8px;margin:10px 0 0}
+.social .video-card-source{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #d5d5d5;border-radius:50%;background:#fff;color:#111;text-decoration:none}
+.social .video-card-source:hover{background:#111;color:#fff;border-color:#111}
+.social .video-card-source:focus-visible,.social .video-poster:focus-visible{outline:2px solid #111;outline-offset:3px}
