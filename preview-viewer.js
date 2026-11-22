@@ -3,7 +3,7 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'preview-dialog';
   dialog.setAttribute('aria-labelledby', 'preview-dialog-title');
-  dialog.innerHTML = '<div class="preview-dialog-header"><h2 id="preview-dialog-title" class="visually-hidden"></h2><button type="button" class="preview-close" aria-label="Close preview">×</button></div><div class="preview-dialog-stage"></div><div class="preview-dialog-footer"><a class="preview-original" target="_blank" rel="noopener noreferrer">Open original <span aria-hidden="true">↗</span></a></div>';
+  dialog.innerHTML = '<div class="preview-dialog-header"><h2 id="preview-dialog-title" class="visually-hidden"></h2><button type="button" class="preview-close" aria-label="Close preview">×</button></div><div class="preview-dialog-stage"></div><div class="preview-dialog-footer"><a class="preview-original" target="_blank" rel="noopener noreferrer">Open original <svg class="arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>';
   document.body.append(dialog);
   const title = dialog.querySelector('h2');
   const stage = dialog.querySelector('.preview-dialog-stage');
@@ -32,7 +32,7 @@
     dialog.dataset.kind = host.includes('instagram') ? 'instagram' : host.includes('tiktok') ? 'tiktok' : 'project';
     original.href = target.dataset.previewOriginal || target.href;
     const platformLabel = host.includes('canva') ? 'Open in Canva' : host.includes('figma') ? 'Open in Figma' : host.includes('instagram') ? 'Open on Instagram' : host.includes('tiktok') ? 'Open on TikTok' : 'Open original';
-    original.innerHTML = platformLabel + ' <span aria-hidden="true">↗</span>';
+    original.innerHTML = platformLabel + ' <svg class="arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>';
     original.setAttribute('aria-label', platformLabel + ': ' + title.textContent + ' (opens in a new tab)');
     const frame = document.createElement('iframe');
     frame.title = title.textContent;
